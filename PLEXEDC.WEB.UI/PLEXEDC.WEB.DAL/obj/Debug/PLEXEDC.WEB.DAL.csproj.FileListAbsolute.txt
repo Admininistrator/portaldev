@@ -2,3 +2,9 @@ C:\NewProjects\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\bin\Debug\PLEXEDC.WEB.DAL.dll
 C:\NewProjects\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\bin\Debug\PLEXEDC.WEB.DAL.pdb
 C:\NewProjects\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\obj\Debug\PLEXEDC.WEB.DAL.dll
 C:\NewProjects\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\obj\Debug\PLEXEDC.WEB.DAL.pdb
+C:\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\bin\Debug\PLEXEDC.WEB.DAL.dll
+C:\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\bin\Debug\PLEXEDC.WEB.DAL.pdb
+C:\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\bin\Debug\PLEXEDC.WEB.DAL.dll.CodeAnalysisLog.xml
+C:\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\bin\Debug\PLEXEDC.WEB.DAL.dll.lastcodeanalysissucceeded
+C:\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\obj\Debug\PLEXEDC.WEB.DAL.dll
+C:\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\obj\Debug\PLEXEDC.WEB.DAL.pdb

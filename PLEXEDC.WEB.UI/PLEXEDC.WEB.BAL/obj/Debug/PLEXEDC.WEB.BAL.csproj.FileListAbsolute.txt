@@ -5,3 +5,12 @@ C:\NewProjects\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Debug\PLEXEDC.WEB.DAL.pdb
 C:\NewProjects\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\obj\Debug\PLEXEDC.WEB.BAL.csprojResolveAssemblyReference.cache
 C:\NewProjects\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\obj\Debug\PLEXEDC.WEB.BAL.dll
 C:\NewProjects\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\obj\Debug\PLEXEDC.WEB.BAL.pdb
+C:\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Debug\PLEXEDC.WEB.BAL.dll
+C:\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Debug\PLEXEDC.WEB.BAL.pdb
+C:\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Debug\PLEXEDC.WEB.BAL.dll.CodeAnalysisLog.xml
+C:\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Debug\PLEXEDC.WEB.BAL.dll.lastcodeanalysissucceeded
+C:\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Debug\PLEXEDC.WEB.DAL.dll
+C:\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Debug\PLEXEDC.WEB.DAL.pdb
+C:\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\obj\Debug\PLEXEDC.WEB.BAL.csprojResolveAssemblyReference.cache
+C:\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\obj\Debug\PLEXEDC.WEB.BAL.dll
+C:\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\obj\Debug\PLEXEDC.WEB.BAL.pdb
