@@ -11,6 +11,7 @@ namespace PLEXEDC.WEB.UI.Controllers
     {
         public ActionResult Index()
         {
+            //This is Teslim line of code
             BasicHttpBinding b = new BasicHttpBinding();
             EndpointAddress a = new EndpointAddress("http://192.168.10.5/eai_anon_enu/start.swe?SWEExtSource=AnonWebService&amp;SweExtCmd=Execute");
             
