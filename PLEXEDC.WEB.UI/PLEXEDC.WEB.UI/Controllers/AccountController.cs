@@ -16,11 +16,11 @@ namespace PLEXEDC.WEB.UI.Controllers
     public class AccountController : Controller
     {
         public AccountController()
-            : this(new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext())))
+            : this(new PLEXEDC.WEB.UI.Controllers.UserManagerPlexada(new UserStore<ApplicationUser>(new ApplicationDbContext())))
         {
         }
 
-        public AccountController(UserManager<ApplicationUser> userManager)
+        public AccountController(UserManagerPlexada userManager)
         {
             UserManager = userManager;
         }
@@ -78,7 +78,7 @@ namespace PLEXEDC.WEB.UI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser() { UserName = model.UserName, CalypsoId = ""  };
+                var user = new ApplicationUser() { UserName = model.UserName, CalypsoId = "" , SiebelId = model.SiebelId };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

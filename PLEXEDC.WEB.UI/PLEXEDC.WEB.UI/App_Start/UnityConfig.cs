@@ -6,6 +6,8 @@ using PLEXEDC.WEB.UI.Models;
 using Microsoft.AspNet.Identity;
 using PLEXEDC.WEB.UI.Controllers;
 using Microsoft.AspNet.Identity.EntityFramework;
+using PLEXEDC.WEB.UI.Core;
+using PLEXEDC.WEB.UI.Implementation;
 
 namespace PLEXEDC.WEB.UI.App_Start
 {
@@ -37,7 +39,9 @@ namespace PLEXEDC.WEB.UI.App_Start
         /// change the defaults), as Unity allows resolving a concrete type even if it was not previously registered.</remarks>
         public static void RegisterTypes(IUnityContainer container)
         {
+            container.RegisterType<ISiebelServices,SiebelServices>();
             container.RegisterType<DbContext, ApplicationDbContext>(new HierarchicalLifetimeManager());
+            container.RegisterType<UserManagerPlexada>(new HierarchicalLifetimeManager());
             container.RegisterType<UserManager<ApplicationUser>>(new HierarchicalLifetimeManager());
             container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>(new HierarchicalLifetimeManager());
             container.RegisterType<AccountController>(new InjectionConstructor());

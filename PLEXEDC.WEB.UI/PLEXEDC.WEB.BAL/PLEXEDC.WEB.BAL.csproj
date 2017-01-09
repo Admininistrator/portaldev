@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\ISiebelServices.cs" />
+    <Compile Include="Implementation\SiebelServices.cs" />
     <Compile Include="Models\ActivityModel.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\ServiceRequestModel.cs" />
@@ -52,8 +54,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\" />
-    <Folder Include="Implementation\" />
     <Folder Include="Objects\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -199,13 +200,17 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserManagerPlexada.cs" />
+    <Compile Include="Core\ISiebelServices.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Implementation\SiebelServices.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ServiceRequestViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\ServiceReference1\Reference.cs">
+    <Compile Include="Service References\SiebelReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -233,49 +238,51 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
-    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
-    <Content Include="Service References\ServiceReference1\PLEXEDC.WEB.UI.ServiceReference1.CreateSRResponse.datasource">
+    <None Include="Service References\SiebelReference\configuration91.svcinfo" />
+    <None Include="Service References\SiebelReference\configuration.svcinfo" />
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.CreateSRResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference1\PLEXEDC.WEB.UI.ServiceReference1.CreateSR_Output.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.CreateSR_Output.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference1\PLEXEDC.WEB.UI.ServiceReference1.GetCustomersSRsResponse.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference1\PLEXEDC.WEB.UI.ServiceReference1.GetCustomersSRs_Output.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRs_Output.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference1\PLEXEDC.WEB.UI.ServiceReference1.GetSRActivitiesResponse.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.GetSRActivitiesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference1\PLEXEDC.WEB.UI.ServiceReference1.GetSRActivities_Output.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.GetSRActivities_Output.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference1\PLEXEDC.WEB.UI.ServiceReference1.GetSRCountResponse.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.GetSRCountResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference1\PLEXEDC.WEB.UI.ServiceReference1.GetSRCount_Output.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.GetSRCount_Output.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference1\PLEXEDC.WEB.UI.ServiceReference1.QuerySRResponse.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.QuerySRResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference1\PLEXEDC.WEB.UI.ServiceReference1.QuerySR_Output.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.QuerySR_Output.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference1\PLEXEDC.WEB.UI.ServiceReference1.UpdateSRResponse.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.UpdateSRResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference1\PLEXEDC.WEB.UI.ServiceReference1.UpdateSR_Output.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.UpdateSR_Output.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\ServiceReference1\Reference.svcmap">
+    <None Include="Service References\SiebelReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -300,7 +307,7 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <None Include="Service References\ServiceReference1\PLXServiceRequest_Service.wsdl" />
+    <None Include="Service References\SiebelReference\PLXServiceRequest_Service.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -322,7 +329,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+    <WCFMetadataStorage Include="Service References\SiebelReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

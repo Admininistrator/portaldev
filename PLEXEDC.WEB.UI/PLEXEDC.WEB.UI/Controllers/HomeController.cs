@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PLEXEDC.WEB.UI.Core;
+using PLEXEDC.WEB.UI.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
@@ -9,13 +11,30 @@ namespace PLEXEDC.WEB.UI.Controllers
 {
     public class HomeController : Controller
     {
+        public readonly ISiebelServices siebelServices;
+
+        public HomeController(ISiebelServices siebelServices)
+        {
+            this.siebelServices = siebelServices;
+        }
+
         public ActionResult Index()
         {
-            //This is Teslim line of code
-            BasicHttpBinding b = new BasicHttpBinding();
-            EndpointAddress a = new EndpointAddress("http://192.168.10.5/eai_anon_enu/start.swe?SWEExtSource=AnonWebService&amp;SweExtCmd=Execute");
-            
-            return View();
+            if (Request.IsAuthenticated)
+            {
+               siebelServices.SetClient(new SiebelReference.GetCustServiceRequestsClient());  
+                var lst = siebelServices.Get(User.Identity.Name);
+
+                ServiceRequestViewModel srvm = new ServiceRequestViewModel();
+
+                srvm.ServiceRequests = lst;
+
+                return View(srvm);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
         }
 
         public ActionResult About()
