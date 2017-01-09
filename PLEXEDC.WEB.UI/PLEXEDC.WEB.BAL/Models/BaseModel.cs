@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace PLEXEDC.WEB.BAL.Models
 {
-    class BaseModel
+    public class BaseModel
     {
-        public string Id { get; set; }
-
         public string CustomerId { get; set; }
     }
 }

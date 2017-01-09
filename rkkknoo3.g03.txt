@@ -1,0 +1,115 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch plexdev/master
+# Your branch is up-to-date with 'origin/plexdev/master'.
+#
+# Changes to be committed:
+#	new file:   PLEXEDC.WEB.UI/.vs/PLEXEDC.WEB.UI/v14/.suo
+#	new file:   PLEXEDC.WEB.UI/.vs/config/applicationhost.config
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/Core/ISiebelServices.cs
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/Implementation/SiebelServices.cs
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/Models/BaseModel.cs
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/Models/ServiceRequestModel.cs
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/Models/TradeModel.cs
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/PLEXEDC.WEB.BAL.csproj
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/bin/Debug/PLEXEDC.WEB.BAL.dll
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/bin/Debug/PLEXEDC.WEB.BAL.pdb
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/bin/Debug/PLEXEDC.WEB.DAL.dll
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/bin/Debug/PLEXEDC.WEB.DAL.pdb
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/obj/Debug/PLEXEDC.WEB.BAL.csproj.FileListAbsolute.txt
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/obj/Debug/PLEXEDC.WEB.BAL.csprojResolveAssemblyReference.cache
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/obj/Debug/PLEXEDC.WEB.BAL.dll
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/obj/Debug/PLEXEDC.WEB.BAL.pdb
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.BAL/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.DAL/PLEXEDC.WEB.DAL.csproj
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.DAL/bin/Debug/PLEXEDC.WEB.DAL.dll
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.DAL/bin/Debug/PLEXEDC.WEB.DAL.pdb
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.DAL/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.DAL/obj/Debug/PLEXEDC.WEB.DAL.csproj.FileListAbsolute.txt
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.DAL/obj/Debug/PLEXEDC.WEB.DAL.dll
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.DAL/obj/Debug/PLEXEDC.WEB.DAL.pdb
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.DAL/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.DAL/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.DAL/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.Tests/Controllers/HomeControllerTest.cs
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.Tests/bin/Debug/Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.Tests/bin/Debug/PLEXEDC.WEB.BAL.dll
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.Tests/bin/Debug/PLEXEDC.WEB.BAL.pdb
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.Tests/bin/Debug/PLEXEDC.WEB.UI.Tests.dll
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.Tests/bin/Debug/PLEXEDC.WEB.UI.Tests.pdb
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.Tests/bin/Debug/PLEXEDC.WEB.UI.dll
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.Tests/bin/Debug/PLEXEDC.WEB.UI.pdb
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.Tests/bin/Debug/System.Web.WebPages.Deployment.dll
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.Tests/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.Tests/obj/Debug/PLEXEDC.WEB.UI.Tests.csproj.FileListAbsolute.txt
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.Tests/obj/Debug/PLEXEDC.WEB.UI.Tests.csprojResolveAssemblyReference.cache
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.Tests/obj/Debug/PLEXEDC.WEB.UI.Tests.dll
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.Tests/obj/Debug/PLEXEDC.WEB.UI.Tests.pdb
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.Tests/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.Tests/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.Tests/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.v12.suo
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/App_Start/UnityConfig.cs
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Controllers/AccountController.cs
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Controllers/HomeController.cs
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Controllers/UserManagerPlexada.cs
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Core/ISiebelServices.cs
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Global.asax.cs
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Implementation/SiebelServices.cs
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Models/AccountViewModels.cs
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Models/ServiceRequestViewModel.cs
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.csproj
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/PLEXEDC.WEB.UI.csproj.user
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference2/PLEXEDC.WEB.UI.ServiceReference2.CreateServiceRequest_1Response.datasource
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference2/PLEXEDC.WEB.UI.ServiceReference2.CreateServiceRequest_1_Output.datasource
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference2/PLEXEDC.WEB.UI.ServiceReference2.QueryServiceRequestResponse.datasource
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference2/PLEXEDC.WEB.UI.ServiceReference2.QueryServiceRequest_Output.datasource
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference2/PLEXEDC.WEB.UI.ServiceReference2.UpdateServiceRequest_1Response.datasource
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference2/PLEXEDC.WEB.UI.ServiceReference2.UpdateServiceRequest_1_Output.datasource
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference2/Reference.cs
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference2/Reference.svcmap
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference2/Service Request.wsdl
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference2/configuration.svcinfo
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference2/configuration91.svcinfo
+#	renamed:    PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference1/PLEXEDC.WEB.UI.ServiceReference1.CreateSRResponse.datasource -> PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/SiebelReference/PLEXEDC.WEB.UI.SiebelReference.CreateSRResponse.datasource
+#	renamed:    PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference1/PLEXEDC.WEB.UI.ServiceReference1.CreateSR_Output.datasource -> PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/SiebelReference/PLEXEDC.WEB.UI.SiebelReference.CreateSR_Output.datasource
+#	renamed:    PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference1/PLEXEDC.WEB.UI.ServiceReference1.GetCustomersSRsResponse.datasource -> PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/SiebelReference/PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRsResponse.datasource
+#	renamed:    PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference1/PLEXEDC.WEB.UI.ServiceReference1.GetCustomersSRs_Output.datasource -> PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/SiebelReference/PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRs_Output.datasource
+#	renamed:    PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference1/PLEXEDC.WEB.UI.ServiceReference1.GetSRActivitiesResponse.datasource -> PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/SiebelReference/PLEXEDC.WEB.UI.SiebelReference.GetSRActivitiesResponse.datasource
+#	renamed:    PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference1/PLEXEDC.WEB.UI.ServiceReference1.GetSRActivities_Output.datasource -> PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/SiebelReference/PLEXEDC.WEB.UI.SiebelReference.GetSRActivities_Output.datasource
+#	renamed:    PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference1/PLEXEDC.WEB.UI.ServiceReference1.GetSRCountResponse.datasource -> PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/SiebelReference/PLEXEDC.WEB.UI.SiebelReference.GetSRCountResponse.datasource
+#	renamed:    PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference1/PLEXEDC.WEB.UI.ServiceReference1.GetSRCount_Output.datasource -> PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/SiebelReference/PLEXEDC.WEB.UI.SiebelReference.GetSRCount_Output.datasource
+#	renamed:    PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference1/PLEXEDC.WEB.UI.ServiceReference1.QuerySRResponse.datasource -> PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/SiebelReference/PLEXEDC.WEB.UI.SiebelReference.QuerySRResponse.datasource
+#	renamed:    PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference1/PLEXEDC.WEB.UI.ServiceReference1.QuerySR_Output.datasource -> PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/SiebelReference/PLEXEDC.WEB.UI.SiebelReference.QuerySR_Output.datasource
+#	renamed:    PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference1/PLEXEDC.WEB.UI.ServiceReference1.UpdateSRResponse.datasource -> PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/SiebelReference/PLEXEDC.WEB.UI.SiebelReference.UpdateSRResponse.datasource
+#	renamed:    PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference1/PLEXEDC.WEB.UI.ServiceReference1.UpdateSR_Output.datasource -> PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/SiebelReference/PLEXEDC.WEB.UI.SiebelReference.UpdateSR_Output.datasource
+#	renamed:    PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference1/PLXServiceRequest_Service.wsdl -> PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/SiebelReference/PLXServiceRequest_Service.wsdl
+#	renamed:    PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference1/Reference.cs -> PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/SiebelReference/Reference.cs
+#	renamed:    PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference1/Reference.svcmap -> PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/SiebelReference/Reference.svcmap
+#	renamed:    PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference1/configuration.svcinfo -> PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/SiebelReference/configuration.svcinfo
+#	renamed:    PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/ServiceReference1/configuration91.svcinfo -> PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Service References/SiebelReference/configuration91.svcinfo
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Views/Account/Register.cshtml
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Views/Home/Index.cshtml
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/Web.config
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/bin/PLEXEDC.WEB.BAL.dll
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/bin/PLEXEDC.WEB.BAL.pdb
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/bin/PLEXEDC.WEB.DAL.dll
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/bin/PLEXEDC.WEB.UI.dll
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/bin/PLEXEDC.WEB.UI.dll.config
+#	modified:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/bin/PLEXEDC.WEB.UI.pdb
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/obj/Debug/PLEXEDC.WEB.UI.csproj.FileListAbsolute.txt
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/obj/Debug/PLEXEDC.WEB.UI.csprojResolveAssemblyReference.cache
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/obj/Debug/PLEXEDC.WEB.UI.dll
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/obj/Debug/PLEXEDC.WEB.UI.pdb
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/obj/Debug/TempPE/Service References.SiebelReference.Reference.cs.dll
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+#	new file:   PLEXEDC.WEB.UI/PLEXEDC.WEB.UI/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+#
+

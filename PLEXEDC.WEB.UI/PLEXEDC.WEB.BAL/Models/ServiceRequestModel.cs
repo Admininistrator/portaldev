@@ -8,22 +8,11 @@ namespace PLEXEDC.WEB.BAL.Models
 {
     public class ServiceRequestModel : BaseModel
     {
-
-        public string Type { get; set; }
-        public string Status { get; set; }
-        public DateTime CreatedDate { get; set; }
-
-        public string Summary { get; set; }
-
         public string Area { get; set; }
-
+        public string ContactId { get; set; }
+        public string Description { get; set; }
+        public string Status { get; set; }
         public string SubArea { get; set; }
-
-
-        
-
-
-
-
+        public string Type { get; set; }
     }
 }

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsdLocal2="http://www.siebel.com/xml/PLX%20Service%20Request" xmlns:xsdLocal1="http://www.siebel.com/xml/PLX%20Activities" xmlns:tns="http://siebel.com/CustomUI" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://siebel.com/CustomUI" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.siebel.com/xml/PLX%20Activities">
+      <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+      </xsd:annotation>
+      <xsd:element name="ListOfPlxActivities" type="xsdLocal1:ListOfPlxActivities" />
+      <xsd:complexType name="ListOfPlxActivitiesTopElmt">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="ListOfPlxActivities" type="xsdLocal1:ListOfPlxActivities" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListOfPlxActivities">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Action" type="xsdLocal1:Action" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Action">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="ActivitySRId" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Description" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Status" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="Type" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://siebel.com/CustomUI">
+      <xsd:import namespace="http://www.siebel.com/xml/PLX%20Service%20Request" />
+      <xsd:import namespace="http://www.siebel.com/xml/PLX%20Activities" />
+      <xsd:element name="CreateSR_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Type" type="xsd:string" />
+            <xsd:element name="SubArea" type="xsd:string" />
+            <xsd:element name="Area" type="xsd:string" />
+            <xsd:element name="CustomerId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CreateSR_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Error_spcCode" type="xsd:string" />
+            <xsd:element name="Error_spcMessage" type="xsd:string" />
+            <xsd:element name="ServiceRequestNumber" type="xsd:string" />
+            <xsd:element name="Status" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSRCount_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CustomerId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSRCount_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Error_spcCode" type="xsd:string" />
+            <xsd:element name="Error_spcMessage" type="xsd:string" />
+            <xsd:element name="ServiceRequestCount" type="xsd:string" />
+            <xsd:element name="Status" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSRActivities_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ServiceRequestNumber" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSRActivities_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Error_spcCode" type="xsd:string" />
+            <xsd:element name="Error_spcMessage" type="xsd:string" />
+            <xsd:element ref="xsdLocal1:ListOfPlxActivities" />
+            <xsd:element name="Status" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateSR_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ServiceRequestStatus" type="xsd:string" />
+            <xsd:element name="ServiceRequestNumber" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateSR_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Error_spcCode" type="xsd:string" />
+            <xsd:element name="Error_spcMessage" type="xsd:string" />
+            <xsd:element name="Status" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCustomersSRs_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CustomerId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCustomersSRs_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="xsdLocal2:ListOfPlxServiceRequest" />
+            <xsd:element name="Error_spcCode" type="xsd:string" />
+            <xsd:element name="Error_spcMessage" type="xsd:string" />
+            <xsd:element name="Status" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="QuerySR_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ServiceRequestNumber" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="QuerySR_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Area" type="xsd:string" />
+            <xsd:element name="Error_spcCode" type="xsd:string" />
+            <xsd:element name="Error_spcMessage" type="xsd:string" />
+            <xsd:element name="ServiceRequestStatus" type="xsd:string" />
+            <xsd:element name="Status" type="xsd:string" />
+            <xsd:element name="SubArea" type="xsd:string" />
+            <xsd:element name="Type" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.siebel.com/xml/PLX%20Service%20Request">
+      <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+      </xsd:annotation>
+      <xsd:element name="ListOfPlxServiceRequest" type="xsdLocal2:ListOfPlxServiceRequest" />
+      <xsd:complexType name="ListOfPlxServiceRequestTopElmt">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="ListOfPlxServiceRequest" type="xsdLocal2:ListOfPlxServiceRequest" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListOfPlxServiceRequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ServiceRequest" type="xsdLocal2:ServiceRequest" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ServiceRequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Area" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ContactId" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="INSProduct" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="Status" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Sub-Area" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="CreateSR_Input">
+    <part name="CreateSR_Input" element="tns:CreateSR_Input" />
+  </message>
+  <message name="CreateSR_Output">
+    <part name="CreateSR_Output" element="tns:CreateSR_Output" />
+  </message>
+  <message name="GetSRCount_Input">
+    <part name="GetSRCount_Input" element="tns:GetSRCount_Input" />
+  </message>
+  <message name="GetSRCount_Output">
+    <part name="GetSRCount_Output" element="tns:GetSRCount_Output" />
+  </message>
+  <message name="GetSRActivities_Input">
+    <part name="GetSRActivities_Input" element="tns:GetSRActivities_Input" />
+  </message>
+  <message name="GetSRActivities_Output">
+    <part name="GetSRActivities_Output" element="tns:GetSRActivities_Output" />
+  </message>
+  <message name="UpdateSR_Input">
+    <part name="UpdateSR_Input" element="tns:UpdateSR_Input" />
+  </message>
+  <message name="UpdateSR_Output">
+    <part name="UpdateSR_Output" element="tns:UpdateSR_Output" />
+  </message>
+  <message name="GetCustomersSRs_Input">
+    <part name="GetCustomersSRs_Input" element="tns:GetCustomersSRs_Input" />
+  </message>
+  <message name="GetCustomersSRs_Output">
+    <part name="GetCustomersSRs_Output" element="tns:GetCustomersSRs_Output" />
+  </message>
+  <message name="QuerySR_Input">
+    <part name="QuerySR_Input" element="tns:QuerySR_Input" />
+  </message>
+  <message name="QuerySR_Output">
+    <part name="QuerySR_Output" element="tns:QuerySR_Output" />
+  </message>
+  <portType name="CreateServiceRequest">
+    <operation name="CreateSR">
+      <input message="tns:CreateSR_Input" />
+      <output message="tns:CreateSR_Output" />
+    </operation>
+  </portType>
+  <portType name="GetServiceRequest">
+    <operation name="GetSRCount">
+      <input message="tns:GetSRCount_Input" />
+      <output message="tns:GetSRCount_Output" />
+    </operation>
+  </portType>
+  <portType name="GetSRActivities">
+    <operation name="GetSRActivities">
+      <input message="tns:GetSRActivities_Input" />
+      <output message="tns:GetSRActivities_Output" />
+    </operation>
+  </portType>
+  <portType name="UpdateServiceRequest">
+    <operation name="UpdateSR">
+      <input message="tns:UpdateSR_Input" />
+      <output message="tns:UpdateSR_Output" />
+    </operation>
+  </portType>
+  <portType name="GetCustServiceRequests">
+    <operation name="GetCustomersSRs">
+      <input message="tns:GetCustomersSRs_Input" />
+      <output message="tns:GetCustomersSRs_Output" />
+    </operation>
+  </portType>
+  <portType name="QueryServiceRequest">
+    <operation name="QuerySR">
+      <input message="tns:QuerySR_Input" />
+      <output message="tns:QuerySR_Output" />
+    </operation>
+  </portType>
+  <binding name="CreateServiceRequest" type="tns:CreateServiceRequest">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="CreateSR">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:CreateSR" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetServiceRequest" type="tns:GetServiceRequest">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetSRCount">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:GetSRCount" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetSRActivities" type="tns:GetSRActivities">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetSRActivities">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:GetSRActivities" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="UpdateServiceRequest" type="tns:UpdateServiceRequest">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="UpdateSR">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:UpdateSR" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetCustServiceRequests" type="tns:GetCustServiceRequests">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetCustomersSRs">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:GetCustomersSRs" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="QueryServiceRequest" type="tns:QueryServiceRequest">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="QuerySR">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:QuerySR" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PLXServiceRequest">
+    <port name="CreateServiceRequest" binding="tns:CreateServiceRequest">
+      <soap:address location="http://192.168.1.8/eai_anon_enu/start.swe?SWEExtSource=AnonWebService&amp;SweExtCmd=Execute" />
+    </port>
+    <port name="GetServiceRequest" binding="tns:GetServiceRequest">
+      <soap:address location="http://192.168.1.8/eai_anon_enu/start.swe?SWEExtSource=AnonWebService&amp;SweExtCmd=Execute" />
+    </port>
+    <port name="GetSRActivities" binding="tns:GetSRActivities">
+      <soap:address location="http://192.168.1.8/eai_anon_enu/start.swe?SWEExtSource=AnonWebService&amp;SweExtCmd=Execute" />
+    </port>
+    <port name="UpdateServiceRequest" binding="tns:UpdateServiceRequest">
+      <soap:address location="http://192.168.1.8/eai_anon_enu/start.swe?SWEExtSource=AnonWebService&amp;SweExtCmd=Execute" />
+    </port>
+    <port name="GetCustServiceRequests" binding="tns:GetCustServiceRequests">
+      <soap:address location="http://192.168.1.8/eai_anon_enu/start.swe?SWEExtSource=AnonWebService&amp;SweExtCmd=Execute" />
+    </port>
+    <port name="QueryServiceRequest" binding="tns:QueryServiceRequest">
+      <soap:address location="http://192.168.1.8/eai_anon_enu/start.swe?SWEExtSource=AnonWebService&amp;SweExtCmd=Execute" />
+    </port>
+  </service>
+</definitions>

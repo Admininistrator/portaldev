@@ -59,5 +59,10 @@ namespace PLEXEDC.WEB.UI.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+
+        [Required]
+        [Display(Name = "SiebelId")]
+        public string SiebelId { get; set; }
     }
 }
