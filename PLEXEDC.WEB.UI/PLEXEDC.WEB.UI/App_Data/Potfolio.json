@@ -1,0 +1,69 @@
+{
+  "OutValue": "",
+  "StatusID": 0,
+  "StatusMessage": "",
+  "DataTable": {
+    "ColumnDef": [
+      {
+        "Key": 0,
+        "Value": "Symbol"
+      },
+      {
+        "Key": 1,
+        "Value": "Qty"
+      },
+      {
+        "Key": 2,
+        "Value": "MostRecentPrice"
+      },
+      {
+        "Key": 3,
+        "Value": "MktValue"
+      },
+      {
+        "Key": 4,
+        "Value": "CostBasis"
+      },
+      {
+        "Key": 5,
+        "Value": "Chg"
+      },
+      {
+        "Key": 6,
+        "Value": "ChgSincePurchase"
+      }
+    ],
+    "Rows": [
+      [
+        {
+          "Key": 0,
+          "Value": "EGH"
+        },
+        {
+          "Key": 1,
+          "Value": "317.0000"
+        },
+        {
+          "Key": 2,
+          "Value": "67.0000"
+        },
+        {
+          "Key": 3,
+          "Value": "21239.0000"
+        },
+        {
+          "Key": 4,
+          "Value": "0"
+        },
+        {
+          "Key": 5,
+          "Value": "0"
+        },
+        {
+          "Key": 6,
+          "Value": "21239"
+        }
+      ]
+    ]
+  }
+}

@@ -1,8 +1,8 @@
-C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\bin\Debug\PLEXEDC.WEB.DAL.dll
-C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\bin\Debug\PLEXEDC.WEB.DAL.pdb
-C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\obj\Debug\PLEXEDC.WEB.DAL.dll
-C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\obj\Debug\PLEXEDC.WEB.DAL.pdb
 C:\NewProjects\plexada\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\bin\Debug\PLEXEDC.WEB.DAL.dll
 C:\NewProjects\plexada\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\bin\Debug\PLEXEDC.WEB.DAL.pdb
 C:\NewProjects\plexada\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\obj\Debug\PLEXEDC.WEB.DAL.dll
 C:\NewProjects\plexada\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\obj\Debug\PLEXEDC.WEB.DAL.pdb
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\bin\Debug\PLEXEDC.WEB.DAL.dll
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\bin\Debug\PLEXEDC.WEB.DAL.pdb
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\obj\Debug\PLEXEDC.WEB.DAL.dll
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.DAL\obj\Debug\PLEXEDC.WEB.DAL.pdb

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 using PLEXEDC.WEB.UI.Models;
 using System;
 using System.Collections.Generic;
@@ -11,28 +12,28 @@ namespace PLEXEDC.WEB.UI.Controllers
 {
    
 
-    public class UserManagerPlexada : UserManager<ApplicationUser>
+    public class UserManagerPlexada : UserManager<Models.ApplicationUserManager>
     {
-        public UserManagerPlexada(IUserStore<ApplicationUser> store) : base(store)
+        public UserManagerPlexada(IUserStore<Models.ApplicationUserManager> store) : base(store)
         {
 
         }
 
-       
-
-        public override async Task<ClaimsIdentity> CreateIdentityAsync(ApplicationUser user, string authenticationType)
+        public override async Task<ClaimsIdentity> CreateIdentityAsync(Models.ApplicationUserManager user, string authenticationType)
         {
             IList<Claim> claimCollection = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.SiebelId),
+                new Claim(ClaimTypes.Name, user.Id),
                 new Claim(ClaimTypes.Country, "Nigeria"),
-                new Claim(ClaimTypes.Email, user.UserName)
+                new Claim(ClaimTypes.Email, user.UserName),
+                
             };
+
 
             //var claimsIdentity = new ClaimsIdentity(claimCollection, "Company Portal");
 
             var claimsIdentity = new ClaimsIdentity(claimCollection, DefaultAuthenticationTypes.ApplicationCookie);
-
+           
             return await Task.Run(() => claimsIdentity);
         }
     }

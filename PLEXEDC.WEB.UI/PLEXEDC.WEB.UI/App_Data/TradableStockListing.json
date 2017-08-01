@@ -1,0 +1,752 @@
+{
+  "OutValue": "",
+  "StatusID": 0,
+  "StatusMessage": "",
+  "DataTable": {
+    "ColumnDef": [
+      {
+        "Key": 0,
+        "Value": "AccountID"
+      },
+      {
+        "Key": 1,
+        "Value": "Sub"
+      },
+      {
+        "Key": 2,
+        "Value": "Description"
+      },
+      {
+        "Key": 3,
+        "Value": "Type"
+      },
+      {
+        "Key": 4,
+        "Value": "SumOfAmount"
+      }
+    ],
+    "Rows": [
+      [
+        {
+          "Key": 0,
+          "Value": "A.24020"
+        },
+        {
+          "Key": 1,
+          "Value": "10528"
+        },
+        {
+          "Key": 2,
+          "Value": "AKROFI-QUARCOO PHILIP (MR) "
+        },
+        {
+          "Key": 3,
+          "Value": "AGENT"
+        },
+        {
+          "Key": 4,
+          "Value": "27.6500"
+        }
+      ],
+      [
+        {
+          "Key": 0,
+          "Value": "A.24020"
+        },
+        {
+          "Key": 1,
+          "Value": "10528"
+        },
+        {
+          "Key": 2,
+          "Value": "AKROFI-QUARCOO PHILIP (MR) "
+        },
+        {
+          "Key": 3,
+          "Value": "CALL"
+        },
+        {
+          "Key": 4,
+          "Value": "27.6500"
+        }
+      ],
+      [
+        {
+          "Key": 0,
+          "Value": "A.24020"
+        },
+        {
+          "Key": 1,
+          "Value": "10528"
+        },
+        {
+          "Key": 2,
+          "Value": "AKROFI-QUARCOO PHILIP (MR) "
+        },
+        {
+          "Key": 3,
+          "Value": "CUSTODIAN1"
+        },
+        {
+          "Key": 4,
+          "Value": "27.6500"
+        }
+      ],
+      [
+        {
+          "Key": 0,
+          "Value": "A.24020"
+        },
+        {
+          "Key": 1,
+          "Value": "10528"
+        },
+        {
+          "Key": 2,
+          "Value": "AKROFI-QUARCOO PHILIP (MR) "
+        },
+        {
+          "Key": 3,
+          "Value": "CUSTODIAN2"
+        },
+        {
+          {
+            "OutValue": "",
+            "StatusID": 0,
+            "StatusMessage": "",
+            "DataTable": {
+              "ColumnDef": [
+                {
+                  "Key": 0,
+                  "Value": "Symbol"
+                },
+                {
+                  "Key": 1,
+                  "Value": "Qty"
+                },
+                {
+                  "Key": 2,
+                  "Value": "MostRecentPrice"
+                },
+                {
+                  "Key": 3,
+                  "Value": "MktValue"
+                },
+                {
+                  "Key": 4,
+                  "Value": "CostBasis"
+                },
+                {
+                  "Key": 5,
+                  "Value": "Chg"
+                },
+                {
+                  "Key": 6,
+                  "Value": "ChgSincePurchase"
+                }
+              ],
+              "Rows": [
+                [
+                  {
+                    "Key": 0,
+                    "Value": "ACI"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "500.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "34.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "17000.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "17000"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "ALW"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "10000.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "34.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "340000.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "340000"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "AYRTN"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "2500.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "34.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "85000.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "85000"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "CAL"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "600.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "10.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "6000.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "6000"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "CLYD"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "2000.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "34.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "68000.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "68000"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "CPC"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "2000.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "34.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "68000.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "68000"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "EGL"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "500.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "34.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "17000.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "17000"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "FML"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "20.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "34.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "680.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "680"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "GCB"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "2935.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "340.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "997900.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "997900"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "GOIL"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "5000.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "34.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "170000.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "170000"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "HFC"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "200.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "20.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "4000.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "4000"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "MLC"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "3000.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "1.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "3000.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "3000"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "PBC"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "1000.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "34.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "34000.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "34000"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "PKL"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "5000.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "45.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "225000.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "225000"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "SIC"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "3000.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "23.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "69000.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "69000"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "SOGEGH"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "32120.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "34.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "1092080.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "1092080"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "SPL"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "6000.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "34.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "204000.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "204000"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "TLW"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "24.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "34.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "816.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "816"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "TOTAL"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "1200.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "34.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "40800.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "40800"
+                  }
+                ],
+                [
+                  {
+                    "Key": 0,
+                    "Value": "UNIL"
+                  },
+                  {
+                    "Key": 1,
+                    "Value": "225.0000"
+                  },
+                  {
+                    "Key": 2,
+                    "Value": "34.0000"
+                  },
+                  {
+                    "Key": 3,
+                    "Value": "7650.0000"
+                  },
+                  {
+                    "Key": 4,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 5,
+                    "Value": "0"
+                  },
+                  {
+                    "Key": 6,
+                    "Value": "7650"
+                  }
+                ]
+              ]
+            }
+          }
+          3.

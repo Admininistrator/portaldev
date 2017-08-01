@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using PLEXEDC.WEB.UI.Models;
+using PLEXEDC.WEB.UI.Services;
+using Microsoft.AspNet.Identity.Owin;
 
 namespace PLEXEDC.WEB.UI.Controllers
 {
@@ -16,7 +18,7 @@ namespace PLEXEDC.WEB.UI.Controllers
     public class AccountController : Controller
     {
         public AccountController()
-            : this(new PLEXEDC.WEB.UI.Controllers.UserManagerPlexada(new UserStore<ApplicationUser>(new ApplicationDbContext())))
+            : this(new PLEXEDC.WEB.UI.Controllers.UserManagerPlexada(new UserStore<Models.ApplicationUserManager>(new ApplicationDbContext())))
         {
         }
 
@@ -25,7 +27,7 @@ namespace PLEXEDC.WEB.UI.Controllers
             UserManager = userManager;
         }
 
-        public UserManager<ApplicationUser> UserManager { get; private set; }
+        public UserManager<Models.ApplicationUserManager> UserManager { get; private set; }
 
         //
         // GET: /Account/Login
@@ -45,9 +47,11 @@ namespace PLEXEDC.WEB.UI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await UserManager.FindAsync(model.UserName, model.Password);
+                var user = await UserManager.FindAsync(model.Email, model.Password);
                 if (user != null)
                 {
+                    var personService = new PersonService(HttpContext.GetOwinContext().Get<ApplicationDbContext>());
+                    personService.UpdatePerson(user.Id);
                     await SignInAsync(user, model.RememberMe);
                     return RedirectToLocal(returnUrl);
                 }
@@ -78,10 +82,14 @@ namespace PLEXEDC.WEB.UI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser() { UserName = model.UserName, CalypsoId = "" , SiebelId = model.SiebelId };
+                var user = new Models.ApplicationUserManager() { Email = model.Email, UserName = model.Email, CalypsoId = "" , SiebelId = model.SiebelId, InfowareId = model.InfoWareId };
+
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    UserManager.AddClaim(user.Id, new Claim(ClaimTypes.GivenName, model.Email));
+                    var personServie = new PersonService(HttpContext.GetOwinContext().Get<ApplicationDbContext>());
+                    personServie.CreatePerson(user, DateTime.Now);
                     await SignInAsync(user, isPersistent: false);
                     return RedirectToAction("Index", "Home");
                 }
@@ -265,7 +273,7 @@ namespace PLEXEDC.WEB.UI.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser() { UserName = model.UserName };
+                var user = new Models.ApplicationUserManager() { UserName = model.UserName };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
@@ -331,7 +339,7 @@ namespace PLEXEDC.WEB.UI.Controllers
             }
         }
 
-        private async Task SignInAsync(ApplicationUser user, bool isPersistent)
+        private async Task SignInAsync(Models.ApplicationUserManager user, bool isPersistent)
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ExternalCookie);
             var identity = await UserManager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie);

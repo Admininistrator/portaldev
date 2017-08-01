@@ -6,36 +6,231 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <link href="~/App_Themes/www/app.min.css" rel="stylesheet" />
+    <link href="~/App_Themes/www/dropzone.css" rel="stylesheet" />
+    <link href="~/App_Themes/www/dropzone.min.css" rel="stylesheet" />
+    <link href="~/App_Themes/www/EcoAllStyles.min.css" rel="stylesheet" />
+    <link href="~/App_Themes/www/real-person.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
+    <header id="header">
+        <div id="top1_panel_header">
+            <!--Block one-->
+            <div class="show-for-large first-top-menu">
+                <div class="row top-menu">
+                    <div class="large-8 columns global-menu vertical-align">
+                        <ul class="menu ">
+                            <li class="active"><a target="_self" href="#">Welcome: @ViewBag.CustomerName</a></li>
+                            <li><a target="_self" href="/">Infoware ID: @ViewBag.InfowareId</a></li>
+                            <li><a target="_self" href="#">Last Login: @ViewBag.LastLoginDate</a></li>
+                        </ul>
+
+
+                    </div>
+                    @*<div class="large-4 columns social vertical-align">
+                            <div class="social-links vertical-align-inside">
+                                <span class="follow-us"><a href="/group/news-and-media/social-media" target="_blank">Follow us</a></span>
+
+
+                                <a href="https://www.youtube.com/user/EcobankGroup" class="social-button has-tip top" target="_blank" title="" aria-haspopup="true" data-disable-hover="false" data-tooltip="k0xx1m-tooltip" aria-describedby="4ddi1l-tooltip" data-yeti-box="4ddi1l-tooltip" data-toggle="4ddi1l-tooltip" data-resize="4ddi1l-tooltip" data-events="resize"><span class="fab fab-youtube"></span></a>
+                                <a href="https://www.facebook.com/EcobankGroup/" class="social-button has-tip top" target="_blank" title="" aria-haspopup="true" data-disable-hover="false" data-tooltip="aywe1t-tooltip" aria-describedby="xdr888-tooltip" data-yeti-box="xdr888-tooltip" data-toggle="xdr888-tooltip" data-resize="xdr888-tooltip" data-events="resize"><span class="fab fab-facebook-alt"></span></a>
+                                <a href="https://twitter.com/GroupEcobank" class="social-button has-tip top" target="_blank" title="" aria-haspopup="true" data-disable-hover="false" data-tooltip="dx8ed6-tooltip" aria-describedby="64hvuw-tooltip" data-yeti-box="64hvuw-tooltip" data-toggle="64hvuw-tooltip" data-resize="64hvuw-tooltip" data-events="resize"><span class="fab fab-twitter"></span></a>
+                                <a href="https://www.instagram.com/ecobank_group/" class="social-button has-tip top" target="_blank" title="" aria-haspopup="true" data-disable-hover="false" data-tooltip="mxrenq-tooltip" aria-describedby="dbgm5v-tooltip" data-yeti-box="dbgm5v-tooltip" data-toggle="dbgm5v-tooltip" data-resize="dbgm5v-tooltip" data-events="resize"><span class="fab fab-instagram"></span></a>
+                                <a href="https://www.linkedin.com/in/ecobank-group-26a13447" class="social-button has-tip top" target="_blank" title="" aria-haspopup="true" data-disable-hover="false" data-tooltip="sw6j7c-tooltip" aria-describedby="z47cac-tooltip" data-yeti-box="z47cac-tooltip" data-toggle="z47cac-tooltip" data-resize="z47cac-tooltip" data-events="resize"><span class="fab fab-linkedin-alt"></span></a>
+                            </div>
+                        </div>*@
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+
+            <!--Block two-->
+            <div class="row slidebox-top clearfix hide-for-large" id="slidebox-top-login" data-top-open="">
+                <div class="small-12 columns">
+                    <div class="log-on-title">
+                        <p><i class="btl bt-lock"></i>Login to Internet Banking</p>
+                    </div>
+                    <div class="log-on-buttons">
+
+
+
+                        <h4>Internet Banking</h4>
+
+                        <ul class="login-buttons">
+
+                            <li>
+                                <a id="top1_topLoginBlock1_hl_personal_login" class="button expanded" href="https://ibank.ecobank.com/RIBOnline/" target="_blank">Personal</a>
+                            </li>
+
+
+                            <li>
+                                <a class="button expanded" href="https://omni.ecobank.com/GCPCW/index.jsp" target="_blank">Omni<span class="show-for-sr">Login to your business Ecobank banking service.</span></a>
+                            </li>
+
+
+
+                            <li>
+                                <a id="top1_topLoginBlock1_hl_internetBanking_login" class="button expanded" href="https://rib.ecobank.com/ribnigeria/NGRLogin.html" target="_blank">Corporate</a>
+                            </li>
+
+
+                            <h4>Login</h4>
+
+
+                            <li><a id="top1_topLoginBlock1_hl_trading_login" class="button expanded" href="https://edctradingportal.ecobank.com/IW" target="_blank">Trading</a></li>
+
+
+                        </ul>
+                    </div>
+                </div>
             </div>
+            <div class="row slidebox-top clearfix hide-for-large" id="slidebox-top-contact" data-top-open="">
+                <div class="small-12 columns">
+                    <div class="log-on-title">
+                        <p><i class="btl bt-phone"></i> Contact</p>
+                    </div>
+                    <div class="log-on-buttons">
+                        <a id="top1_slidebox_top_contact_1" class="button" href="/ng/personal-banking/contact-us">Get in Touch</a>
+                        <a id="top1_slidebox_top_contact_2" class="button" href="/ng/personal-banking/contact-us/locator">Find a Service</a>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-    </div>
+        @*<div class="row slidebox-top clearfix hide-for-large" id="slidebox-top-contact" data-top-open="">
+                <div class="small-12 columns">
+                    <div class="log-on-title">
+                        <p><i class="btl bt-phone"></i> Contact</p>
+                    </div>
+                    <div class="log-on-buttons">
+                        <a id="top1_slidebox_top_contact_1" class="button" href="/ng/personal-banking/contact-us">Get in Touch</a>
+                        <a id="top1_slidebox_top_contact_2" class="button" href="/ng/personal-banking/contact-us/locator">Find a Service</a>
+                    </div>
+                </div>
+            </div>*@
+        <div class="top-branding-switches">
+
+        </div>
+
+        <!-- top-block-3-menu -->
+        <div id="top1_panel_main_menu" class="page-main-navigation show-for-large">
+            <div class="row">
+                <div class="large-12 columns">
+                    <nav class="main-navigation" id="main-navigation">
+                        <ul class="main-navigation-menu dropdown menu" data-dropdown-menu="xmio2a-dropdown-menu" data-hover-delay="0" data-closing-time="0" role="menubar">
+                            @*<li class="home active" role="menuitem">
+                                    <a id="top1_TOPMENU1_hl_home" href="/" tabindex="0"><i class="home btl bt-home bt-3x"></i></a>
+                                </li>*@
+                            <li role="menuitem" class="has-submenu is-dropdown-submenu-parent is-down-arrow" aria-haspopup="true" aria-selected="false" aria-expanded="false" aria-label="Home">
+                                <a id="top1_TOPMENU1_rep_parent_menu_hl_header_0" href="@Url.Action("Index", "Home")">Home</a>
+                            </li>
+                            <li role="menuitem" class="has-submenu is-dropdown-submenu-parent is-down-arrow" aria-haspopup="true" aria-selected="false" aria-expanded="false" aria-label="My &amp; Account">
+                                <a id="top1_TOPMENU1_rep_parent_menu_hl_header_1" href="@Url.Action("Account","Home")">My Account</a>
+                            </li>
+                            <li role="menuitem" class="has-submenu is-dropdown-submenu-parent is-down-arrow" aria-haspopup="true" aria-selected="false" aria-expanded="false" aria-label="Ways to Bank">
+                                <a id="top1_TOPMENU1_rep_parent_menu_hl_header_2" href="@Url.Action("Trade","Home")">Trade</a>
+                            </li>
+                            <li role="menuitem" class="has-submenu is-dropdown-submenu-parent is-down-arrow" aria-haspopup="true" aria-selected="false" aria-expanded="false" aria-label="Service Information">
+                                <a id="top1_TOPMENU1_rep_parent_menu_hl_header_3" href="#">Service Information</a>
+                            </li>
+                            <li role="menuitem" class="has-submenu is-dropdown-submenu-parent is-down-arrow" aria-haspopup="true" aria-selected="false" aria-expanded="false" aria-label="My Profile">
+                                <a id="top1_TOPMENU1_rep_parent_menu_hl_header_4" href="#">My Profile</a>
+                            </li>
+                            <li role="menuitem" class="has-submenu is-dropdown-submenu-parent is-down-arrow" aria-haspopup="true" aria-selected="false" aria-expanded="false" aria-label="Contact Us">
+                                <a id="top1_TOPMENU1_rep_parent_menu_hl_header_4" href="#">Contact Us</a>
+                            </li>
+
+
+                            <li role="menuitem" class="has-submenu is-dropdown-submenu-parent is-down-arrow" aria-haspopup="true" aria-selected="false" aria-expanded="false" aria-label="" data-is-click="true">
+                                <div id="top1_TOPMENU1_rep_parent_menu_hl_header_4" class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th pull-left"></span></a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                        <li role="presentation">
+                                            <a role="menuitem" tabindex="-1" href="@Url.Action("Index", "Home")">Home</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a role="menuitem" tabindex="-1" href="@Url.Action("Account", "Home")">My Account</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a role="menuitem" tabindex="-1" href="@Url.Action("Trade", "Home")">
+                                                Trade
+                                            </a>
+                                        </li>
+                                        @*<li role="presentation" class="divider"></li>*@
+                                        <li role="presentation">
+                                            <a role="menuitem" tabindex="-1" href="#">Service Information</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a role="menuitem" tabindex="-1" href="#">My Profile</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a role="menuitem" tabindex="-1" href="#">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <script>
+                            $(document).ready(function () {
+                                setTimeout(function () {
+                                    $(".child-block1").find("li.has-submenu").each(function () {
+                                        var top_padding = $(this).index() * (-100);
+                                        $(this).find(".child-block2").css("top", top_padding + "%");
+                                    });
+                                    $(".child-block2").find("li.has-submenu").each(function () {
+                                        var top_padding = $(this).index() * (-100);
+                                        $(this).find(".child-block3").css("top", top_padding + "%");
+                                    });
+
+
+                                    $("#main-navigation > ul").on("show.zf.dropdownmenu", function (ev, $el) {
+                                        var _$max_height = $(".main-navigation-panels.js-dropdown-active").height();
+                                        $el.find("ul").each(function (index) {
+                                            $(this).css("height", "auto");
+                                            if ($(this).height() > _$max_height) _$max_height = $(this).height();
+                                        });
+                                        $(".main-navigation-menu").find("ul").height(_$max_height);
+
+                                        if ($el.hasClass("main-navigation-panels")) {
+                                            $("#middle_hover_back").addClass("hover-back");
+                                        }
+                                        if ($el.hasClass("child-block2")) {
+                                            $(".main-navigation-panels .child-block1").parent().addClass("back-hover");
+                                            $(".main-navigation-panels .panel-content").css("display", "none");
+                                        }
+                                    });
+                                    $("#main-navigation > ul").on("hide.zf.dropdownmenu", function (ev, $el) {
+                                        if ($el.hasClass("is-down-arrow") || $el.hasClass("main-navigation-menu")) {
+                                            $("#middle_hover_back").removeClass("hover-back");
+                                            $(".main-navigation-menu").find("ul").height("");
+                                            $(".main-navigation-panels .child-block1").parent().removeClass("back-hover");
+                                            $(".main-navigation-panels .panel-content").css("display", "block");
+                                        }
+                                        if ($el.hasClass("is-right-arrow") && !$el.hasClass("is-submenu-item")) {
+                                            $(".main-navigation-panels .child-block1").parent().removeClass("back-hover");
+                                            $(".main-navigation-panels .panel-content").css("display", "block");
+                                        }
+                                    });
+
+                                }, 300)
+                            });
+                        </script>
+
+                    </nav>
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+    </header>
+    <br />
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+
     </div>
+    <footer></footer>
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

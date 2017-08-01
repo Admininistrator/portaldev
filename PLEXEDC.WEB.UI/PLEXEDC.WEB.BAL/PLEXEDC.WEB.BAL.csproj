@@ -30,8 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PLEXEDC.WEB.UI\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,10 +45,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\ISiebelServices.cs" />
+    <Compile Include="Implementation\InfowareService.cs" />
     <Compile Include="Implementation\SiebelServices.cs" />
     <Compile Include="Models\ActivityModel.cs" />
     <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Biodata.cs" />
+    <Compile Include="Models\CSCSNumber.cs" />
+    <Compile Include="Models\OpenOrder.cs" />
     <Compile Include="Models\ServiceRequestModel.cs" />
+    <Compile Include="Models\StockList.cs" />
     <Compile Include="Models\TradeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

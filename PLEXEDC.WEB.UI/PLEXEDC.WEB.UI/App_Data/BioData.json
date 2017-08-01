@@ -1,0 +1,157 @@
+{
+  "OutValue": "",
+  "StatusID": 0,
+  "StatusMessage": "",
+  "DataTable": {
+    "ColumnDef": [
+      {
+        "Key": 0,
+        "Value": "CustAID"
+      },
+      {
+        "Key": 1,
+        "Value": "Contact"
+      },
+      {
+        "Key": 2,
+        "Value": "Name"
+      },
+      {
+        "Key": 3,
+        "Value": "Title"
+      },
+      {
+        "Key": 4,
+        "Value": "Nationality"
+      },
+      {
+        "Key": 5,
+        "Value": "ClientType"
+      },
+      {
+        "Key": 6,
+        "Value": "ContactDate"
+      },
+      {
+        "Key": 7,
+        "Value": "BranchCode"
+      },
+      {
+        "Key": 8,
+        "Value": "Address1"
+      },
+      {
+        "Key": 9,
+        "Value": "Address2"
+      },
+      {
+        "Key": 10,
+        "Value": "City"
+      },
+      {
+        "Key": 11,
+        "Value": "State"
+      },
+      {
+        "Key": 12,
+        "Value": "Country"
+      },
+      {
+        "Key": 13,
+        "Value": "Phone1"
+      },
+      {
+        "Key": 14,
+        "Value": "Email1"
+      },
+      {
+        "Key": 15,
+        "Value": "Bank"
+      },
+      {
+        "Key": 16,
+        "Value": "BankAcctNumber"
+      },
+      {
+        "Key": 17,
+        "Value": "BankAcctName"
+      }
+    ],
+    "Rows": [
+      [
+        {
+          "Key": 0,
+          "Value": "24294"
+        },
+        {
+          "Key": 1,
+          "Value": "244282189"
+        },
+        {
+          "Key": 2,
+          "Value": "AINOO RAHMAT "
+        },
+        {
+          "Key": 3,
+          "Value": ""
+        },
+        {
+          "Key": 4,
+          "Value": "GHANIAN"
+        },
+        {
+          "Key": 5,
+          "Value": "IND"
+        },
+        {
+          "Key": 6,
+          "Value": "8\/5\/2016 12:00:00 AM"
+        },
+        {
+          "Key": 7,
+          "Value": "000"
+        },
+        {
+          "Key": 8,
+          "Value": "P.O.BOX SK 526 SAKUMONO ESTATES, TEMA"
+        },
+        {
+          "Key": 9,
+          "Value": ""
+        },
+        {
+          "Key": 10,
+          "Value": ""
+        },
+        {
+          "Key": 11,
+          "Value": ""
+        },
+        {
+          "Key": 12,
+          "Value": "GHANA"
+        },
+        {
+          "Key": 13,
+          "Value": "244282189"
+        },
+        {
+          "Key": 14,
+          "Value": "jagezo@ecobank.com"
+        },
+        {
+          "Key": 15,
+          "Value": ""
+        },
+        {
+          "Key": 16,
+          "Value": ""
+        },
+        {
+          "Key": 17,
+          "Value": ""
+        }
+      ]
+    ]
+  }
+}

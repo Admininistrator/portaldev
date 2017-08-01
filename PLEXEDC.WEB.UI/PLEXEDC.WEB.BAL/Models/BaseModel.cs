@@ -8,6 +8,12 @@ namespace PLEXEDC.WEB.BAL.Models
 {
     public class BaseModel
     {
-        public string CustomerId { get; set; }
+        //public string CustomerId { get; set; }
+
+        public string SiebelId { get; set; }
+        public string InfowareId { get; set; }
+        public string CalypsoId { get; set; }
+        public DateTime LastLoginDate { get; set; }
+
     }
 }
