@@ -1,0 +1,45 @@
+{
+  "OutValue": "6dac0de7-9b51-4334-a22b-90994a51b73c",
+  "StatusID": 0,
+  "StatusMessage": "",
+  "DataTable": {
+    "ColumnDef": [
+      {
+        "Key": 0,
+        "Value": "UserID"
+      },
+      {
+        "Key": 1,
+        "Value": "Fullname"
+      },
+      {
+        "Key": 2,
+        "Value": "LastLogonDate"
+      },
+      {
+        "Key": 3,
+        "Value": "LastLogonMachine"
+      }
+    ],
+    "Rows": [
+      [
+        {
+          "Key": 0,
+          "Value": "system"
+        },
+        {
+          "Key": 1,
+          "Value": "System Administrator"
+        },
+        {
+          "Key": 2,
+          "Value": "8\/1\/2017 12:15:45 PM"
+        },
+        {
+          "Key": 3,
+          "Value": "10.12.122.33"
+        }
+      ]
+    ]
+  }
+}

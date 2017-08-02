@@ -251,6 +251,7 @@
     <Content Include="App_Data\Potfolio.json" />
     <Content Include="App_Data\StockList.json" />
     <Content Include="App_Data\TradableStockListing.json" />
+    <Content Include="App_Data\InfowareLogin.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

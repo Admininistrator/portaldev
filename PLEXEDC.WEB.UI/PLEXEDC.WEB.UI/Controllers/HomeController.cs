@@ -38,6 +38,7 @@ namespace PLEXEDC.WEB.UI.Controllers
             var person = db.Person.Where(c => c.ApplicationUserId == userId).First();
             string siebelId = person.SiebelId;
             ViewBag.InfowareId = person.InfowareId;
+            string sessionId = person.SessionId;
             ViewBag.LastLoginDate = person.LastLoginDate.ToShortDateString();
             return View();
             //}

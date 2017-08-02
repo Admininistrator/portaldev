@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using Newtonsoft.Json.Linq;
+using System.Net;
 
 namespace PLEXEDC.WEB.UI.Services
 {
@@ -36,14 +38,21 @@ namespace PLEXEDC.WEB.UI.Services
         {
             var user = db.Person.Where(c => c.ApplicationUserId == userId).First();
             user.LastLoginDate = DateTime.Now;
-
+            user.SessionId = getSessionId();
             db.Person.Attach(user);
             db.Entry(user).State = EntityState.Modified;
             db.SaveChanges();
         }
 
-        
-        
+        private string getSessionId()
+        {
+            String jsonString = System.IO.File.ReadAllText(System.Web.HttpContext.Current.Server.MapPath("~/App_Data/InfowareLogin.json"));
+            JObject obj = JObject.Parse(jsonString);
 
+            JToken outValue = obj["OutValue"];
+            string sessionId = outValue.ToString();
+
+            return sessionId;
+        }
     }
 }
