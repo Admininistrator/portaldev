@@ -12,7 +12,7 @@
             <div class="panel-body">
                 <ul class="list-group">
                     <li class="list-group-item">Infoware ID: @ViewBag.InfowareId</li>
-                    <li class="list-group-item">Account Name:@ViewBag.AccountNumber </li>
+                    <li class="list-group-item">Account Name: @Model.AccountNumber </li>
                 </ul>
             </div>
         </div>
@@ -42,11 +42,11 @@
             </div>
             <div class="panel-body">
                 <ul class="list-group">
-                    <li class="list-group-item">Cash Balances - </li>
+                    <li class="list-group-item"><a data-target="#stockListingModal" data-toggle="modal">Cash Balances</a></li>
                     <li class="list-group-item">Margin Allowed - </li>
                     <li class="list-group-item">Uncleared Effects - </li>
                     <li class="list-group-item">Available Trading Funds - </li>
-                    <li class="list-group-item">Portfolio Value - @ViewBag.PotFolioValue </li>
+                    <li class="list-group-item"><a data-target="#stockListingModal" data-toggle="modal">PortFolio Value</a></li>
 
                 </ul>
             </div>
@@ -54,7 +54,9 @@
                 <a data-target="#transactionModal" data-toggle="modal">Transactions</a>
             </div>
         </div>
+        @Html.Partial("_stockListing")
 
+        @Html.Partial("_transactionListing")
     </div>
     <div class="col-md-6">
         <div class="panel panel-default">
@@ -87,7 +89,7 @@
 
     </div>
 </div>
-@*@Html.Partial("_Transactions")*@
+
 
 
 

@@ -1,4 +1,5 @@
-﻿using PLEXEDC.WEB.BAL.Models;
+﻿
+using PLEXEDC.WEB.BAL.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,8 @@ namespace PLEXEDC.WEB.UI.Models
 {
     public class CustomerAccountViewModel : BaseModel
     {
-        public string PortfolioValue { get; set; }
-        public List<string> Accounts { get; set; }
+        public string AccountNumber { get; set; }
+        public List<StockList> StockListing { get; set; }
+        public List<Transaction> TransactionListing { get; set; }
     }
 }

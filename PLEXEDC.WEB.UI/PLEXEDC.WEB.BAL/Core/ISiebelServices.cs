@@ -1,4 +1,5 @@
-﻿using PLEXEDC.WEB.BAL.Models;
+﻿using PLEXEDC.WEB.BAL.Model;
+using PLEXEDC.WEB.BAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

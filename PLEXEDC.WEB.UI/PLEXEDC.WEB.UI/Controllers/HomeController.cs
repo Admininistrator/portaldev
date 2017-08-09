@@ -57,19 +57,30 @@ namespace PLEXEDC.WEB.UI.Controllers
             ViewBag.InfowareId = person.InfowareId;
             ViewBag.LastLoginDate = person.LastLoginDate.ToShortDateString();
 
-            var cscs = _inforwareService.GetCSCSNumber(person.InfowareId);
-            ViewBag.AccountNumber = cscs.Select(c => c.CsCsAcct).First();
+            var model = new CustomerAccountViewModel();
+
+            var cscs = _inforwareService.GetCSCSNumber(person.SessionId, person.InfowareId);
+            model.AccountNumber = cscs.Select(c => c.CsCsAcct).First();
+            model.StockListing = _inforwareService.GetPortFolio(person.SessionId, person.InfowareId);
+            model.TransactionListing = _inforwareService.GetAccountOverView(person.SessionId, person.InfowareId);
             
-
-
-            return View();
+            return View(model);
         }
 
-        public ActionResult Contact()
+        public ActionResult Trade()
         {
-            ViewBag.Message = "Your contact page.";
+            var userId = User.Identity.GetUserName();
+            var person = db.Person.Where(c => c.ApplicationUserId == userId).First();
 
-            return View();
+            ViewBag.InfowareId = person.InfowareId;
+            ViewBag.LastLoginDate = person.LastLoginDate.ToShortDateString();
+
+            var model = new TradeViewModel();
+
+            model.OpenOrder = _inforwareService.GetOpenOrder(person.SessionId, person.InfowareId);
+            model.TradableStock = _inforwareService.GetTradableStock(person.SessionId, person.InfowareId);
+            
+            return View(model);
         }
     }
 }

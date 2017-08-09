@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PLEXEDC.WEB.BAL.Models;
+using PLEXEDC.WEB.BAL.Model;
 
 namespace PLEXEDC.WEB.BAL.Implementation
 {

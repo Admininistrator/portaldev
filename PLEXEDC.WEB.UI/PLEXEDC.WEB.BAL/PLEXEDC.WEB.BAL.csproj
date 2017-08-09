@@ -36,6 +36,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,17 +45,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\IInfowareService.cs" />
     <Compile Include="Core\ISiebelServices.cs" />
-    <Compile Include="Implementation\InfowareService.cs" />
     <Compile Include="Implementation\SiebelServices.cs" />
-    <Compile Include="Models\ActivityModel.cs" />
-    <Compile Include="Models\BaseModel.cs" />
-    <Compile Include="Models\Biodata.cs" />
-    <Compile Include="Models\CSCSNumber.cs" />
-    <Compile Include="Models\OpenOrder.cs" />
-    <Compile Include="Models\ServiceRequestModel.cs" />
-    <Compile Include="Models\StockList.cs" />
-    <Compile Include="Models\TradeModel.cs" />
+    <Compile Include="Model\ActivityModel.cs" />
+    <Compile Include="Model\BaseModel.cs" />
+    <Compile Include="Model\Biodata.cs" />
+    <Compile Include="Model\CSCSNumber.cs" />
+    <Compile Include="Model\OpenOrder.cs" />
+    <Compile Include="Model\ServiceRequestModel.cs" />
+    <Compile Include="Model\StockList.cs" />
+    <Compile Include="Model\TradableStock.cs" />
+    <Compile Include="Model\TradeModel.cs" />
+    <Compile Include="Model\Transaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

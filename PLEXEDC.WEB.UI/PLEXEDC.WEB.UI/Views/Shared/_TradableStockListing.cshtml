@@ -1,0 +1,40 @@
+﻿@model PLEXEDC.WEB.UI.Models.TradeViewModel
+
+
+<table class="table ">
+    <thead>
+        <tr style="white-space:nowrap">
+            <th>Symbol</th>
+            <th>Quantity</th>
+            <th>Most RecentPrice</th>
+            <th>Market Value</th>
+            <th>Cost Basis</th>
+            <th>Change</th>
+            <th>Change Since Purchase</th>
+           
+
+
+        </tr>
+    </thead>
+    <tbody style="height:100px; overflow-y:auto; width: 100%;">
+        @foreach (var tr in Model.TradableStock)
+            {
+            <tr style="white-space:nowrap">
+                <td>@tr.Symbol</td>
+                <td>@tr.Qty</td>
+                <td>@tr.MostRecentPrice</td>
+                <td>@tr.MktValue</td>
+                <td>@tr.CostBasis</td>
+                <td>@tr.Chg</td>
+                <td>@tr.ChgSincePurchase</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+
+    </tfoot>
+</table>
+
+
+
+

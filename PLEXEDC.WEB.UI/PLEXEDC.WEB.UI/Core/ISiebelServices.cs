@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PLEXEDC.WEB.UI.SiebelReference;
+using PLEXEDC.WEB.BAL.Model;
 
 namespace PLEXEDC.WEB.UI.Core
 {
