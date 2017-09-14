@@ -205,19 +205,27 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MyAccountController.cs" />
+    <Compile Include="Controllers\ServiceRequestController.cs" />
+    <Compile Include="Controllers\TradeController.cs" />
     <Compile Include="Controllers\UserManagerPlexada.cs" />
     <Compile Include="Core\ISiebelServices.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Implementation\InfowareService.cs" />
-    <Compile Include="Implementation\SiebelServices.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CustomerAccountViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\IndexViewModel.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\ServiceRequestViewModel.cs" />
+    <Compile Include="Models\SRArea.cs" />
+    <Compile Include="Models\SRPriority.cs" />
+    <Compile Include="Models\SRStatus.cs" />
+    <Compile Include="Models\SRSubArea.cs" />
+    <Compile Include="Models\SRSubStatus.cs" />
+    <Compile Include="Models\SRType.cs" />
     <Compile Include="Models\TradeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\SiebelReference\Reference.cs">
@@ -229,6 +237,14 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\EDC ServiceRequests.xml" />
+    <Content Include="App_Themes\www\app.min.css" />
+    <Content Include="App_Themes\www\dropzone.css" />
+    <Content Include="App_Themes\www\dropzone.min.css" />
+    <Content Include="App_Themes\www\EcoAllStyles.min.css" />
+    <Content Include="App_Themes\www\real-person.css" />
+    <Content Include="bootstrap-datepicker\bootstrap-datepicker.js" />
+    <Content Include="bootstrap-datepicker\bootstrap-datepicker3.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -253,7 +269,11 @@
     <Content Include="App_Data\Potfolio.json" />
     <Content Include="App_Data\StockList.json" />
     <Content Include="App_Data\TradableStockListing.json" />
+    <Content Include="App_Data\InfowareLogin.json" />
+    <Content Include="font-roboto\Roboto-Medium.ttf" />
+    <Content Include="font-roboto\Roboto-Regular.ttf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Images\untitled.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -269,40 +289,28 @@
     <Content Include="Scripts\_references.js" />
     <None Include="Service References\SiebelReference\configuration91.svcinfo" />
     <None Include="Service References\SiebelReference\configuration.svcinfo" />
-    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.CreateSRResponse.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivitiesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.CreateSR_Output.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivities_Output.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRsResponse.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetailsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRs_Output.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetails_Output.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.GetSRActivitiesResponse.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.Query_spcSRResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.GetSRActivities_Output.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.Query_spcSR_Output.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.GetSRCountResponse.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.Update_spcSRResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.GetSRCount_Output.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.QuerySRResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.QuerySR_Output.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.UpdateSRResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.UpdateSR_Output.datasource">
+    <Content Include="Service References\SiebelReference\PLEXEDC.WEB.UI.SiebelReference.Update_spcSR_Output.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Service References\SiebelReference\Reference.svcmap">
@@ -336,17 +344,21 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <None Include="Service References\SiebelReference\PLXServiceRequest_Service.wsdl" />
-    <Content Include="Views\Home\Account.cshtml" />
+    <Content Include="Views\MyAccount\Account.cshtml" />
     <Content Include="Views\Shared\_stockListing.cshtml" />
     <Content Include="Views\Shared\_transactionListing.cshtml" />
-    <Content Include="Views\Home\Trade.cshtml" />
+    <Content Include="Views\Trade\Trade.cshtml" />
     <Content Include="Views\Shared\_OpenOrderView.cshtml" />
     <Content Include="Views\Shared\_TradableStockListing.cshtml" />
+    <None Include="Service References\SiebelReference\EDC Webservice.wsdl" />
+    <Content Include="Views\ServiceRequest\ServiceInformation.cshtml" />
+    <Content Include="Views\Shared\_ShowMoreServiceRequest.cshtml" />
+    <Content Include="Views\Shared\_SRActivity.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Themes\" />
     <Folder Include="bin\" />
+    <Folder Include="Helper\" />
+    <Folder Include="Implementation\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -356,6 +368,10 @@
     <ProjectReference Include="..\PLEXEDC.WEB.BAL\PLEXEDC.WEB.BAL.csproj">
       <Project>{9a7a0d77-9010-4ec5-aa0f-8f34cdfdd87b}</Project>
       <Name>PLEXEDC.WEB.BAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PLEXEDC.WEB.DAL\PLEXEDC.WEB.DAL.csproj">
+      <Project>{BE214EB5-996C-4EE8-BD40-19B1CA877B14}</Project>
+      <Name>PLEXEDC.WEB.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

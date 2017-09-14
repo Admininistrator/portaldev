@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsdLocal2="http://www.siebel.com/xml/XMLP%20Account" xmlns:xsdLocal1="http://www.siebel.com/xml/HDK%20Service%20Request" xmlns:tns="http://siebel.com/CustomUI" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://siebel.com/CustomUI" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://siebel.com/CustomUI">
+      <xsd:import namespace="http://www.siebel.com/xml/XMLP%20Account" />
+      <xsd:import namespace="http://www.siebel.com/xml/HDK%20Service%20Request" />
+      <xsd:element name="EDC_spcSR_spcDetails_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CustomerId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="EDC_spcSR_spcDetails_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="xsdLocal1:ListOf_ServiceRequest" />
+            <xsd:element name="Error_spcCode" type="xsd:string" />
+            <xsd:element name="Error_spcMessage" type="xsd:string" />
+            <xsd:element name="Status" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Update_spcSR_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="RootCause" type="xsd:string" />
+            <xsd:element name="Summary" type="xsd:string" />
+            <xsd:element name="ClosureComments" type="xsd:string" />
+            <xsd:element name="ServiceRequestStatus" type="xsd:string" />
+            <xsd:element name="ServiceRequestNumber" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Update_spcSR_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Error_spcCode" type="xsd:string" />
+            <xsd:element name="Error_spcMessage" type="xsd:string" />
+            <xsd:element name="Status" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Query_spcSR_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="SRNumber" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Query_spcSR_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Description" type="xsd:string" />
+            <xsd:element name="Error_spcCode" type="xsd:string" />
+            <xsd:element name="Error_spcMessage" type="xsd:string" />
+            <xsd:element name="SRStatus" type="xsd:string" />
+            <xsd:element name="Status" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="EDC_spcGet_spcSR_spcActivities_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ServiceRequestNumber" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="EDC_spcGet_spcSR_spcActivities_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="xsdLocal2:ListOf_ServiceRequest" />
+            <xsd:element name="Error_spcCode" type="xsd:string" />
+            <xsd:element name="Error_spcMessage" type="xsd:string" />
+            <xsd:element name="Status" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.siebel.com/xml/XMLP%20Account">
+      <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+      </xsd:annotation>
+      <xsd:element name="ListOf_ServiceRequest" type="xsdLocal2:ListOf_ServiceRequest" />
+      <xsd:complexType name="ListOf_ServiceRequestTopElmt">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="ListOf_ServiceRequest" type="xsdLocal2:ListOf_ServiceRequest" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListOf_ServiceRequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ServiceRequest" type="xsdLocal2:ServiceRequest" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ServiceRequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="SRNumber" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ListOf_Activity" type="xsdLocal2:ListOf_Activity" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListOf_Activity">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Activity" type="xsdLocal2:Activity" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Activity">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Type" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Status" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Priority" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Description" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.siebel.com/xml/HDK%20Service%20Request">
+      <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+      </xsd:annotation>
+      <xsd:element name="ListOf_ServiceRequest" type="xsdLocal1:ListOf_ServiceRequest" />
+      <xsd:complexType name="ListOf_ServiceRequestTopElmt">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="ListOf_ServiceRequest" type="xsdLocal1:ListOf_ServiceRequest" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListOf_ServiceRequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ServiceRequest" type="xsdLocal1:ServiceRequest" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ServiceRequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="SRNumber" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Type" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Area" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="SubArea" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Status" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="SubStatus" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Priority" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Summary" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ClosureComments" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CitizenId" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="EDC_spcSR_spcDetails_Input">
+    <part name="EDC_spcSR_spcDetails_Input" element="tns:EDC_spcSR_spcDetails_Input" />
+  </message>
+  <message name="EDC_spcSR_spcDetails_Output">
+    <part name="EDC_spcSR_spcDetails_Output" element="tns:EDC_spcSR_spcDetails_Output" />
+  </message>
+  <message name="Update_spcSR_Input">
+    <part name="Update_spcSR_Input" element="tns:Update_spcSR_Input" />
+  </message>
+  <message name="Update_spcSR_Output">
+    <part name="Update_spcSR_Output" element="tns:Update_spcSR_Output" />
+  </message>
+  <message name="Query_spcSR_Input">
+    <part name="Query_spcSR_Input" element="tns:Query_spcSR_Input" />
+  </message>
+  <message name="Query_spcSR_Output">
+    <part name="Query_spcSR_Output" element="tns:Query_spcSR_Output" />
+  </message>
+  <message name="EDC_spcGet_spcSR_spcActivities_Input">
+    <part name="EDC_spcGet_spcSR_spcActivities_Input" element="tns:EDC_spcGet_spcSR_spcActivities_Input" />
+  </message>
+  <message name="EDC_spcGet_spcSR_spcActivities_Output">
+    <part name="EDC_spcGet_spcSR_spcActivities_Output" element="tns:EDC_spcGet_spcSR_spcActivities_Output" />
+  </message>
+  <portType name="EDC_spcSR_spcDetails">
+    <operation name="EDC_spcSR_spcDetails">
+      <input message="tns:EDC_spcSR_spcDetails_Input" />
+      <output message="tns:EDC_spcSR_spcDetails_Output" />
+    </operation>
+  </portType>
+  <portType name="EDC_spcUpdate_spcSR">
+    <operation name="Update_spcSR">
+      <input message="tns:Update_spcSR_Input" />
+      <output message="tns:Update_spcSR_Output" />
+    </operation>
+  </portType>
+  <portType name="EDC_spcQuery_spcSR">
+    <operation name="Query_spcSR">
+      <input message="tns:Query_spcSR_Input" />
+      <output message="tns:Query_spcSR_Output" />
+    </operation>
+  </portType>
+  <portType name="EDC_spcContact_spcGet_spcSR_spcActivity_spcWF">
+    <operation name="EDC_spcGet_spcSR_spcActivities">
+      <input message="tns:EDC_spcGet_spcSR_spcActivities_Input" />
+      <output message="tns:EDC_spcGet_spcSR_spcActivities_Output" />
+    </operation>
+  </portType>
+  <binding name="EDC_spcSR_spcDetails" type="tns:EDC_spcSR_spcDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="EDC_spcSR_spcDetails">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:EDC_spcSR_spcDetails" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="EDC_spcUpdate_spcSR" type="tns:EDC_spcUpdate_spcSR">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Update_spcSR">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:Update_spcSR" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="EDC_spcQuery_spcSR" type="tns:EDC_spcQuery_spcSR">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Query_spcSR">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:Query_spcSR" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="EDC_spcContact_spcGet_spcSR_spcActivity_spcWF" type="tns:EDC_spcContact_spcGet_spcSR_spcActivity_spcWF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="EDC_spcGet_spcSR_spcActivities">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:EDC_spcGet_spcSR_spcActivities" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EDC_spcContact_spcGet_spcSR_spcActivity_spcWF">
+    <port name="EDC_spcSR_spcDetails" binding="tns:EDC_spcSR_spcDetails">
+      <soap:address location="http://147.135.177.50/eai_anon_enu/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute" />
+    </port>
+    <port name="EDC_spcUpdate_spcSR" binding="tns:EDC_spcUpdate_spcSR">
+      <soap:address location="http://147.135.177.50/eai_anon_enu/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute" />
+    </port>
+    <port name="EDC_spcQuery_spcSR" binding="tns:EDC_spcQuery_spcSR">
+      <soap:address location="http://147.135.177.50/eai_anon_enu/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute" />
+    </port>
+    <port name="EDC_spcContact_spcGet_spcSR_spcActivity_spcWF" binding="tns:EDC_spcContact_spcGet_spcSR_spcActivity_spcWF">
+      <soap:address location="http://147.135.177.50/eai_anon_enu/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute" />
+    </port>
+  </service>
+</definitions>

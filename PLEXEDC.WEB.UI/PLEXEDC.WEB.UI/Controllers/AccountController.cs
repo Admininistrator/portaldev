@@ -51,8 +51,8 @@ namespace PLEXEDC.WEB.UI.Controllers
                 if (user != null)
                 {
                     var personService = new PersonService(HttpContext.GetOwinContext().Get<ApplicationDbContext>());
-                    personService.UpdatePerson(user.Id);
                     await SignInAsync(user, model.RememberMe);
+                    personService.UpdatePerson(user.Id);
                     return RedirectToLocal(returnUrl);
                 }
                 else

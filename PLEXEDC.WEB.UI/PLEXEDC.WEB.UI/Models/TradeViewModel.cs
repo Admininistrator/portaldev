@@ -1,8 +1,5 @@
-﻿using PLEXEDC.WEB.BAL.Model;
-using System;
+﻿using PLEXEDC.WEB.DAL.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace PLEXEDC.WEB.UI.Models
 {

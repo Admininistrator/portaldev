@@ -1,12 +1,5 @@
-﻿using PLEXEDC.WEB.BAL.Models;
-using PLEXEDC.WEB.UI.Implementation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PLEXEDC.WEB.UI.SiebelReference;
-using PLEXEDC.WEB.BAL.Model;
+﻿using System.Collections.Generic;
+using PLEXEDC.WEB.DAL.Models;
 
 namespace PLEXEDC.WEB.UI.Core
 {
@@ -16,6 +9,7 @@ namespace PLEXEDC.WEB.UI.Core
         ServiceRequestModel Update(ServiceRequestModel request);
         ServiceRequestModel Create(ServiceRequestModel request);
         bool Delete(ServiceRequestModel request);
-        void SetClient(GetCustServiceRequestsClient getCustServiceRequestsClient);
+        //void SetClient(GetCustServiceRequestsClient getCustServiceRequestsClient);
+        void SetClient(SiebelReference.EDC_spcSR_spcDetailsClient client);
     }
 }

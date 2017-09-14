@@ -1,18 +1,15 @@
-﻿using PLEXEDC.WEB.BAL.Model;
-using PLEXEDC.WEB.BAL.Models;
-using System;
+﻿using PLEXEDC.WEB.DAL.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PLEXEDC.WEB.BAL.Core
 {
     public interface ISiebelServices
     {
-        List<ServiceRequestModel> Get(string customerId);
+        List<ServiceRequestModel> GetDetail(string customerId);
+        List<ServiceRequestActivityModel> GetActivity();
         ServiceRequestModel Update(ServiceRequestModel request);
-        ServiceRequestModel Create(ServiceRequestModel request);
+        void Create(ServiceRequestModel request);
         bool Delete(ServiceRequestModel request);
+        
     }
 }

@@ -28,18 +28,22 @@
                             </tr>
                         </thead>
                         <tbody style="overflow:auto">
-                            @foreach (var tr in Model.StockListing)
+                            @if (Model.StockListing != null)
                             {
-                                <tr>
-                                    <td>@tr.Symbol</td>
-                                    <td>@tr.Qty</td>
-                                    <td>@tr.MostRecentPrice</td>
-                                    <td>@tr.MktValue</td>
-                                    <td>@tr.CostBasis</td>
-                                    <td>@tr.Chg</td>
-                                    <td>@tr.ChgSincePurchase</td>
-                                </tr>
+                                foreach (var tr in Model.StockListing)
+                                {
+                                    <tr>
+                                        <td>@tr.Symbol</td>
+                                        <td>@tr.Qty</td>
+                                        <td>@tr.MostRecentPrice</td>
+                                        <td>@tr.MktValue</td>
+                                        <td>@tr.CostBasis</td>
+                                        <td>@tr.Chg</td>
+                                        <td>@tr.ChgSincePurchase</td>
+                                    </tr>
+                                }
                             }
+
                         </tbody>
                         <tfoot>
 
@@ -51,4 +55,3 @@
     </div>
 
 </div>
-

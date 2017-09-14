@@ -27,16 +27,18 @@
                             </tr>
                         </thead>
                         <tbody style="overflow:auto">
-                            @foreach (var tr in Model.TransactionListing)
+                            @if (Model.TransactionListing != null)
                             {
-                                <tr>
-                                    <td>@tr.Type</td>
-                                    <td>@tr.Description</td>
-                                    <td>@tr.Status</td>
-                                    <td>@tr.AID</td>
-                                    <td>@tr.TxnDate.ToShortDateString()</td>
-
-                                </tr>
+                                foreach (var tr in Model.TransactionListing)
+                                {
+                                    <tr>
+                                        <td>@tr.Type</td>
+                                        <td>@tr.Description</td>
+                                        <td>@tr.Status</td>
+                                        <td>@tr.AID</td>
+                                        <td>@tr.TxnDate.ToShortDateString()</td>
+                                    </tr>
+                                }
                             }
                         </tbody>
                         <tfoot>
@@ -49,5 +51,3 @@
     </div>
 
 </div>
-
-

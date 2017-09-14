@@ -12,72 +12,30 @@ namespace PLEXEDC.WEB.UI.SiebelReference {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://siebel.com/CustomUI", ConfigurationName="SiebelReference.CreateServiceRequest")]
-    public interface CreateServiceRequest {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://siebel.com/CustomUI", ConfigurationName="SiebelReference.EDC_spcSR_spcDetails")]
+    public interface EDC_spcSR_spcDetails {
         
-        // CODEGEN: Generating message contract since the operation CreateSR is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:CreateSR", ReplyAction="*")]
+        // CODEGEN: Generating message contract since the operation EDC_spcSR_spcDetails is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:EDC_spcSR_spcDetails", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        PLEXEDC.WEB.UI.SiebelReference.CreateSRResponse CreateSR(PLEXEDC.WEB.UI.SiebelReference.CreateSRRequest request);
+        PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetailsResponse EDC_spcSR_spcDetails(PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetailsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:CreateSR", ReplyAction="*")]
-        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.CreateSRResponse> CreateSRAsync(PLEXEDC.WEB.UI.SiebelReference.CreateSRRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:EDC_spcSR_spcDetails", ReplyAction="*")]
+        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetailsResponse> EDC_spcSR_spcDetailsAsync(PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetailsRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
-    public partial class CreateSR_Input : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string typeField;
-        
-        private string subAreaField;
-        
-        private string areaField;
+    public partial class EDC_spcSR_spcDetails_Input : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string customerIdField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-                this.RaisePropertyChanged("Type");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string SubArea {
-            get {
-                return this.subAreaField;
-            }
-            set {
-                this.subAreaField = value;
-                this.RaisePropertyChanged("SubArea");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string Area {
-            get {
-                return this.areaField;
-            }
-            set {
-                this.areaField = value;
-                this.RaisePropertyChanged("Area");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         public string CustomerId {
             get {
                 return this.customerIdField;
@@ -99,61 +57,35 @@ namespace PLEXEDC.WEB.UI.SiebelReference {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.siebel.com/xml/PLX%20Service%20Request")]
-    public partial class ServiceRequest : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.siebel.com/xml/XMLP%20Account")]
+    public partial class Activity : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string areaField;
-        
-        private string contactIdField;
-        
-        private string iNSProductField;
+        private string typeField;
         
         private string statusField;
         
-        private string subAreaField;
+        private string priorityField;
+        
+        private string descriptionField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Area {
+        public string Type {
             get {
-                return this.areaField;
+                return this.typeField;
             }
             set {
-                this.areaField = value;
-                this.RaisePropertyChanged("Area");
+                this.typeField = value;
+                this.RaisePropertyChanged("Type");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string ContactId {
-            get {
-                return this.contactIdField;
-            }
-            set {
-                this.contactIdField = value;
-                this.RaisePropertyChanged("ContactId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string INSProduct {
-            get {
-                return this.iNSProductField;
-            }
-            set {
-                this.iNSProductField = value;
-                this.RaisePropertyChanged("INSProduct");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         public string Status {
             get {
                 return this.statusField;
@@ -165,57 +97,19 @@ namespace PLEXEDC.WEB.UI.SiebelReference {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Sub-Area", Order=4)]
-        public string SubArea {
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Priority {
             get {
-                return this.subAreaField;
+                return this.priorityField;
             }
             set {
-                this.subAreaField = value;
-                this.RaisePropertyChanged("SubArea");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.siebel.com/xml/PLX%20Activities")]
-    public partial class Action : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string activitySRIdField;
-        
-        private string descriptionField;
-        
-        private string statusField;
-        
-        private string typeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string ActivitySRId {
-            get {
-                return this.activitySRIdField;
-            }
-            set {
-                this.activitySRIdField = value;
-                this.RaisePropertyChanged("ActivitySRId");
+                this.priorityField = value;
+                this.RaisePropertyChanged("Priority");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         public string Description {
             get {
                 return this.descriptionField;
@@ -226,20 +120,105 @@ namespace PLEXEDC.WEB.UI.SiebelReference {
             }
         }
         
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ServiceRequest", Namespace="http://www.siebel.com/xml/XMLP%20Account")]
+    public partial class ServiceRequest1 : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string sRNumberField;
+        
+        private Activity[] listOf_ActivityField;
+        
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string Status {
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string SRNumber {
             get {
-                return this.statusField;
+                return this.sRNumberField;
             }
             set {
-                this.statusField = value;
-                this.RaisePropertyChanged("Status");
+                this.sRNumberField = value;
+                this.RaisePropertyChanged("SRNumber");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
+        public Activity[] ListOf_Activity {
+            get {
+                return this.listOf_ActivityField;
+            }
+            set {
+                this.listOf_ActivityField = value;
+                this.RaisePropertyChanged("ListOf_Activity");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.siebel.com/xml/HDK%20Service%20Request")]
+    public partial class ServiceRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string sRNumberField;
+        
+        private string typeField;
+        
+        private string areaField;
+        
+        private string subAreaField;
+        
+        private string statusField;
+        
+        private string subStatusField;
+        
+        private string priorityField;
+        
+        private string summaryField;
+        
+        private string closureCommentsField;
+        
+        private string citizenIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string SRNumber {
+            get {
+                return this.sRNumberField;
+            }
+            set {
+                this.sRNumberField = value;
+                this.RaisePropertyChanged("SRNumber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string Type {
             get {
                 return this.typeField;
@@ -250,1062 +229,8 @@ namespace PLEXEDC.WEB.UI.SiebelReference {
             }
         }
         
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
-    public partial class CreateSR_Output : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string error_spcCodeField;
-        
-        private string error_spcMessageField;
-        
-        private string serviceRequestNumberField;
-        
-        private string statusField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Error_spcCode {
-            get {
-                return this.error_spcCodeField;
-            }
-            set {
-                this.error_spcCodeField = value;
-                this.RaisePropertyChanged("Error_spcCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Error_spcMessage {
-            get {
-                return this.error_spcMessageField;
-            }
-            set {
-                this.error_spcMessageField = value;
-                this.RaisePropertyChanged("Error_spcMessage");
-            }
-        }
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string ServiceRequestNumber {
-            get {
-                return this.serviceRequestNumberField;
-            }
-            set {
-                this.serviceRequestNumberField = value;
-                this.RaisePropertyChanged("ServiceRequestNumber");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string Status {
-            get {
-                return this.statusField;
-            }
-            set {
-                this.statusField = value;
-                this.RaisePropertyChanged("Status");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CreateSRRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
-        public PLEXEDC.WEB.UI.SiebelReference.CreateSR_Input CreateSR_Input;
-        
-        public CreateSRRequest() {
-        }
-        
-        public CreateSRRequest(PLEXEDC.WEB.UI.SiebelReference.CreateSR_Input CreateSR_Input) {
-            this.CreateSR_Input = CreateSR_Input;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CreateSRResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
-        public PLEXEDC.WEB.UI.SiebelReference.CreateSR_Output CreateSR_Output;
-        
-        public CreateSRResponse() {
-        }
-        
-        public CreateSRResponse(PLEXEDC.WEB.UI.SiebelReference.CreateSR_Output CreateSR_Output) {
-            this.CreateSR_Output = CreateSR_Output;
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface CreateServiceRequestChannel : PLEXEDC.WEB.UI.SiebelReference.CreateServiceRequest, System.ServiceModel.IClientChannel {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CreateServiceRequestClient : System.ServiceModel.ClientBase<PLEXEDC.WEB.UI.SiebelReference.CreateServiceRequest>, PLEXEDC.WEB.UI.SiebelReference.CreateServiceRequest {
-        
-        public CreateServiceRequestClient() {
-        }
-        
-        public CreateServiceRequestClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
-        }
-        
-        public CreateServiceRequestClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public CreateServiceRequestClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public CreateServiceRequestClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        PLEXEDC.WEB.UI.SiebelReference.CreateSRResponse PLEXEDC.WEB.UI.SiebelReference.CreateServiceRequest.CreateSR(PLEXEDC.WEB.UI.SiebelReference.CreateSRRequest request) {
-            return base.Channel.CreateSR(request);
-        }
-        
-        public PLEXEDC.WEB.UI.SiebelReference.CreateSR_Output CreateSR(PLEXEDC.WEB.UI.SiebelReference.CreateSR_Input CreateSR_Input) {
-            PLEXEDC.WEB.UI.SiebelReference.CreateSRRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.CreateSRRequest();
-            inValue.CreateSR_Input = CreateSR_Input;
-            PLEXEDC.WEB.UI.SiebelReference.CreateSRResponse retVal = ((PLEXEDC.WEB.UI.SiebelReference.CreateServiceRequest)(this)).CreateSR(inValue);
-            return retVal.CreateSR_Output;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.CreateSRResponse> PLEXEDC.WEB.UI.SiebelReference.CreateServiceRequest.CreateSRAsync(PLEXEDC.WEB.UI.SiebelReference.CreateSRRequest request) {
-            return base.Channel.CreateSRAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.CreateSRResponse> CreateSRAsync(PLEXEDC.WEB.UI.SiebelReference.CreateSR_Input CreateSR_Input) {
-            PLEXEDC.WEB.UI.SiebelReference.CreateSRRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.CreateSRRequest();
-            inValue.CreateSR_Input = CreateSR_Input;
-            return ((PLEXEDC.WEB.UI.SiebelReference.CreateServiceRequest)(this)).CreateSRAsync(inValue);
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://siebel.com/CustomUI", ConfigurationName="SiebelReference.GetServiceRequest")]
-    public interface GetServiceRequest {
-        
-        // CODEGEN: Generating message contract since the operation GetSRCount is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:GetSRCount", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        PLEXEDC.WEB.UI.SiebelReference.GetSRCountResponse GetSRCount(PLEXEDC.WEB.UI.SiebelReference.GetSRCountRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:GetSRCount", ReplyAction="*")]
-        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.GetSRCountResponse> GetSRCountAsync(PLEXEDC.WEB.UI.SiebelReference.GetSRCountRequest request);
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
-    public partial class GetSRCount_Input : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string customerIdField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string CustomerId {
-            get {
-                return this.customerIdField;
-            }
-            set {
-                this.customerIdField = value;
-                this.RaisePropertyChanged("CustomerId");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
-    public partial class GetSRCount_Output : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string error_spcCodeField;
-        
-        private string error_spcMessageField;
-        
-        private string serviceRequestCountField;
-        
-        private string statusField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Error_spcCode {
-            get {
-                return this.error_spcCodeField;
-            }
-            set {
-                this.error_spcCodeField = value;
-                this.RaisePropertyChanged("Error_spcCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Error_spcMessage {
-            get {
-                return this.error_spcMessageField;
-            }
-            set {
-                this.error_spcMessageField = value;
-                this.RaisePropertyChanged("Error_spcMessage");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string ServiceRequestCount {
-            get {
-                return this.serviceRequestCountField;
-            }
-            set {
-                this.serviceRequestCountField = value;
-                this.RaisePropertyChanged("ServiceRequestCount");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string Status {
-            get {
-                return this.statusField;
-            }
-            set {
-                this.statusField = value;
-                this.RaisePropertyChanged("Status");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetSRCountRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
-        public PLEXEDC.WEB.UI.SiebelReference.GetSRCount_Input GetSRCount_Input;
-        
-        public GetSRCountRequest() {
-        }
-        
-        public GetSRCountRequest(PLEXEDC.WEB.UI.SiebelReference.GetSRCount_Input GetSRCount_Input) {
-            this.GetSRCount_Input = GetSRCount_Input;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetSRCountResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
-        public PLEXEDC.WEB.UI.SiebelReference.GetSRCount_Output GetSRCount_Output;
-        
-        public GetSRCountResponse() {
-        }
-        
-        public GetSRCountResponse(PLEXEDC.WEB.UI.SiebelReference.GetSRCount_Output GetSRCount_Output) {
-            this.GetSRCount_Output = GetSRCount_Output;
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface GetServiceRequestChannel : PLEXEDC.WEB.UI.SiebelReference.GetServiceRequest, System.ServiceModel.IClientChannel {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetServiceRequestClient : System.ServiceModel.ClientBase<PLEXEDC.WEB.UI.SiebelReference.GetServiceRequest>, PLEXEDC.WEB.UI.SiebelReference.GetServiceRequest {
-        
-        public GetServiceRequestClient() {
-        }
-        
-        public GetServiceRequestClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
-        }
-        
-        public GetServiceRequestClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public GetServiceRequestClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public GetServiceRequestClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        PLEXEDC.WEB.UI.SiebelReference.GetSRCountResponse PLEXEDC.WEB.UI.SiebelReference.GetServiceRequest.GetSRCount(PLEXEDC.WEB.UI.SiebelReference.GetSRCountRequest request) {
-            return base.Channel.GetSRCount(request);
-        }
-        
-        public PLEXEDC.WEB.UI.SiebelReference.GetSRCount_Output GetSRCount(PLEXEDC.WEB.UI.SiebelReference.GetSRCount_Input GetSRCount_Input) {
-            PLEXEDC.WEB.UI.SiebelReference.GetSRCountRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.GetSRCountRequest();
-            inValue.GetSRCount_Input = GetSRCount_Input;
-            PLEXEDC.WEB.UI.SiebelReference.GetSRCountResponse retVal = ((PLEXEDC.WEB.UI.SiebelReference.GetServiceRequest)(this)).GetSRCount(inValue);
-            return retVal.GetSRCount_Output;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.GetSRCountResponse> PLEXEDC.WEB.UI.SiebelReference.GetServiceRequest.GetSRCountAsync(PLEXEDC.WEB.UI.SiebelReference.GetSRCountRequest request) {
-            return base.Channel.GetSRCountAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.GetSRCountResponse> GetSRCountAsync(PLEXEDC.WEB.UI.SiebelReference.GetSRCount_Input GetSRCount_Input) {
-            PLEXEDC.WEB.UI.SiebelReference.GetSRCountRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.GetSRCountRequest();
-            inValue.GetSRCount_Input = GetSRCount_Input;
-            return ((PLEXEDC.WEB.UI.SiebelReference.GetServiceRequest)(this)).GetSRCountAsync(inValue);
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://siebel.com/CustomUI", ConfigurationName="SiebelReference.GetSRActivities")]
-    public interface GetSRActivities {
-        
-        // CODEGEN: Generating message contract since the operation GetSRActivities is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:GetSRActivities", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        PLEXEDC.WEB.UI.SiebelReference.GetSRActivitiesResponse GetSRActivities(PLEXEDC.WEB.UI.SiebelReference.GetSRActivitiesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:GetSRActivities", ReplyAction="*")]
-        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.GetSRActivitiesResponse> GetSRActivitiesAsync(PLEXEDC.WEB.UI.SiebelReference.GetSRActivitiesRequest request);
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
-    public partial class GetSRActivities_Input : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string serviceRequestNumberField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string ServiceRequestNumber {
-            get {
-                return this.serviceRequestNumberField;
-            }
-            set {
-                this.serviceRequestNumberField = value;
-                this.RaisePropertyChanged("ServiceRequestNumber");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
-    public partial class GetSRActivities_Output : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string error_spcCodeField;
-        
-        private string error_spcMessageField;
-        
-        private Action[] listOfPlxActivitiesField;
-        
-        private string statusField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Error_spcCode {
-            get {
-                return this.error_spcCodeField;
-            }
-            set {
-                this.error_spcCodeField = value;
-                this.RaisePropertyChanged("Error_spcCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Error_spcMessage {
-            get {
-                return this.error_spcMessageField;
-            }
-            set {
-                this.error_spcMessageField = value;
-                this.RaisePropertyChanged("Error_spcMessage");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://www.siebel.com/xml/PLX%20Activities", Order=2)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public Action[] ListOfPlxActivities {
-            get {
-                return this.listOfPlxActivitiesField;
-            }
-            set {
-                this.listOfPlxActivitiesField = value;
-                this.RaisePropertyChanged("ListOfPlxActivities");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string Status {
-            get {
-                return this.statusField;
-            }
-            set {
-                this.statusField = value;
-                this.RaisePropertyChanged("Status");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetSRActivitiesRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
-        public PLEXEDC.WEB.UI.SiebelReference.GetSRActivities_Input GetSRActivities_Input;
-        
-        public GetSRActivitiesRequest() {
-        }
-        
-        public GetSRActivitiesRequest(PLEXEDC.WEB.UI.SiebelReference.GetSRActivities_Input GetSRActivities_Input) {
-            this.GetSRActivities_Input = GetSRActivities_Input;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetSRActivitiesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
-        public PLEXEDC.WEB.UI.SiebelReference.GetSRActivities_Output GetSRActivities_Output;
-        
-        public GetSRActivitiesResponse() {
-        }
-        
-        public GetSRActivitiesResponse(PLEXEDC.WEB.UI.SiebelReference.GetSRActivities_Output GetSRActivities_Output) {
-            this.GetSRActivities_Output = GetSRActivities_Output;
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface GetSRActivitiesChannel : PLEXEDC.WEB.UI.SiebelReference.GetSRActivities, System.ServiceModel.IClientChannel {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetSRActivitiesClient : System.ServiceModel.ClientBase<PLEXEDC.WEB.UI.SiebelReference.GetSRActivities>, PLEXEDC.WEB.UI.SiebelReference.GetSRActivities {
-        
-        public GetSRActivitiesClient() {
-        }
-        
-        public GetSRActivitiesClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
-        }
-        
-        public GetSRActivitiesClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public GetSRActivitiesClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public GetSRActivitiesClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        PLEXEDC.WEB.UI.SiebelReference.GetSRActivitiesResponse PLEXEDC.WEB.UI.SiebelReference.GetSRActivities.GetSRActivities(PLEXEDC.WEB.UI.SiebelReference.GetSRActivitiesRequest request) {
-            return base.Channel.GetSRActivities(request);
-        }
-        
-        public PLEXEDC.WEB.UI.SiebelReference.GetSRActivities_Output GetSRActivities(PLEXEDC.WEB.UI.SiebelReference.GetSRActivities_Input GetSRActivities_Input) {
-            PLEXEDC.WEB.UI.SiebelReference.GetSRActivitiesRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.GetSRActivitiesRequest();
-            inValue.GetSRActivities_Input = GetSRActivities_Input;
-            PLEXEDC.WEB.UI.SiebelReference.GetSRActivitiesResponse retVal = ((PLEXEDC.WEB.UI.SiebelReference.GetSRActivities)(this)).GetSRActivities(inValue);
-            return retVal.GetSRActivities_Output;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.GetSRActivitiesResponse> PLEXEDC.WEB.UI.SiebelReference.GetSRActivities.GetSRActivitiesAsync(PLEXEDC.WEB.UI.SiebelReference.GetSRActivitiesRequest request) {
-            return base.Channel.GetSRActivitiesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.GetSRActivitiesResponse> GetSRActivitiesAsync(PLEXEDC.WEB.UI.SiebelReference.GetSRActivities_Input GetSRActivities_Input) {
-            PLEXEDC.WEB.UI.SiebelReference.GetSRActivitiesRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.GetSRActivitiesRequest();
-            inValue.GetSRActivities_Input = GetSRActivities_Input;
-            return ((PLEXEDC.WEB.UI.SiebelReference.GetSRActivities)(this)).GetSRActivitiesAsync(inValue);
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://siebel.com/CustomUI", ConfigurationName="SiebelReference.UpdateServiceRequest")]
-    public interface UpdateServiceRequest {
-        
-        // CODEGEN: Generating message contract since the operation UpdateSR is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:UpdateSR", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        PLEXEDC.WEB.UI.SiebelReference.UpdateSRResponse UpdateSR(PLEXEDC.WEB.UI.SiebelReference.UpdateSRRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:UpdateSR", ReplyAction="*")]
-        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.UpdateSRResponse> UpdateSRAsync(PLEXEDC.WEB.UI.SiebelReference.UpdateSRRequest request);
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
-    public partial class UpdateSR_Input : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string serviceRequestStatusField;
-        
-        private string serviceRequestNumberField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string ServiceRequestStatus {
-            get {
-                return this.serviceRequestStatusField;
-            }
-            set {
-                this.serviceRequestStatusField = value;
-                this.RaisePropertyChanged("ServiceRequestStatus");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string ServiceRequestNumber {
-            get {
-                return this.serviceRequestNumberField;
-            }
-            set {
-                this.serviceRequestNumberField = value;
-                this.RaisePropertyChanged("ServiceRequestNumber");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
-    public partial class UpdateSR_Output : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string error_spcCodeField;
-        
-        private string error_spcMessageField;
-        
-        private string statusField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Error_spcCode {
-            get {
-                return this.error_spcCodeField;
-            }
-            set {
-                this.error_spcCodeField = value;
-                this.RaisePropertyChanged("Error_spcCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Error_spcMessage {
-            get {
-                return this.error_spcMessageField;
-            }
-            set {
-                this.error_spcMessageField = value;
-                this.RaisePropertyChanged("Error_spcMessage");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string Status {
-            get {
-                return this.statusField;
-            }
-            set {
-                this.statusField = value;
-                this.RaisePropertyChanged("Status");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class UpdateSRRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
-        public PLEXEDC.WEB.UI.SiebelReference.UpdateSR_Input UpdateSR_Input;
-        
-        public UpdateSRRequest() {
-        }
-        
-        public UpdateSRRequest(PLEXEDC.WEB.UI.SiebelReference.UpdateSR_Input UpdateSR_Input) {
-            this.UpdateSR_Input = UpdateSR_Input;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class UpdateSRResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
-        public PLEXEDC.WEB.UI.SiebelReference.UpdateSR_Output UpdateSR_Output;
-        
-        public UpdateSRResponse() {
-        }
-        
-        public UpdateSRResponse(PLEXEDC.WEB.UI.SiebelReference.UpdateSR_Output UpdateSR_Output) {
-            this.UpdateSR_Output = UpdateSR_Output;
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface UpdateServiceRequestChannel : PLEXEDC.WEB.UI.SiebelReference.UpdateServiceRequest, System.ServiceModel.IClientChannel {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class UpdateServiceRequestClient : System.ServiceModel.ClientBase<PLEXEDC.WEB.UI.SiebelReference.UpdateServiceRequest>, PLEXEDC.WEB.UI.SiebelReference.UpdateServiceRequest {
-        
-        public UpdateServiceRequestClient() {
-        }
-        
-        public UpdateServiceRequestClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
-        }
-        
-        public UpdateServiceRequestClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public UpdateServiceRequestClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public UpdateServiceRequestClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        PLEXEDC.WEB.UI.SiebelReference.UpdateSRResponse PLEXEDC.WEB.UI.SiebelReference.UpdateServiceRequest.UpdateSR(PLEXEDC.WEB.UI.SiebelReference.UpdateSRRequest request) {
-            return base.Channel.UpdateSR(request);
-        }
-        
-        public PLEXEDC.WEB.UI.SiebelReference.UpdateSR_Output UpdateSR(PLEXEDC.WEB.UI.SiebelReference.UpdateSR_Input UpdateSR_Input) {
-            PLEXEDC.WEB.UI.SiebelReference.UpdateSRRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.UpdateSRRequest();
-            inValue.UpdateSR_Input = UpdateSR_Input;
-            PLEXEDC.WEB.UI.SiebelReference.UpdateSRResponse retVal = ((PLEXEDC.WEB.UI.SiebelReference.UpdateServiceRequest)(this)).UpdateSR(inValue);
-            return retVal.UpdateSR_Output;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.UpdateSRResponse> PLEXEDC.WEB.UI.SiebelReference.UpdateServiceRequest.UpdateSRAsync(PLEXEDC.WEB.UI.SiebelReference.UpdateSRRequest request) {
-            return base.Channel.UpdateSRAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.UpdateSRResponse> UpdateSRAsync(PLEXEDC.WEB.UI.SiebelReference.UpdateSR_Input UpdateSR_Input) {
-            PLEXEDC.WEB.UI.SiebelReference.UpdateSRRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.UpdateSRRequest();
-            inValue.UpdateSR_Input = UpdateSR_Input;
-            return ((PLEXEDC.WEB.UI.SiebelReference.UpdateServiceRequest)(this)).UpdateSRAsync(inValue);
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://siebel.com/CustomUI", ConfigurationName="SiebelReference.GetCustServiceRequests")]
-    public interface GetCustServiceRequests {
-        
-        // CODEGEN: Generating message contract since the operation GetCustomersSRs is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:GetCustomersSRs", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRsResponse GetCustomersSRs(PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:GetCustomersSRs", ReplyAction="*")]
-        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRsResponse> GetCustomersSRsAsync(PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRsRequest request);
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
-    public partial class GetCustomersSRs_Input : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string customerIdField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string CustomerId {
-            get {
-                return this.customerIdField;
-            }
-            set {
-                this.customerIdField = value;
-                this.RaisePropertyChanged("CustomerId");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
-    public partial class GetCustomersSRs_Output : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private ServiceRequest[] listOfPlxServiceRequestField;
-        
-        private string error_spcCodeField;
-        
-        private string error_spcMessageField;
-        
-        private string statusField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://www.siebel.com/xml/PLX%20Service%20Request", Order=0)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public ServiceRequest[] ListOfPlxServiceRequest {
-            get {
-                return this.listOfPlxServiceRequestField;
-            }
-            set {
-                this.listOfPlxServiceRequestField = value;
-                this.RaisePropertyChanged("ListOfPlxServiceRequest");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Error_spcCode {
-            get {
-                return this.error_spcCodeField;
-            }
-            set {
-                this.error_spcCodeField = value;
-                this.RaisePropertyChanged("Error_spcCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string Error_spcMessage {
-            get {
-                return this.error_spcMessageField;
-            }
-            set {
-                this.error_spcMessageField = value;
-                this.RaisePropertyChanged("Error_spcMessage");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string Status {
-            get {
-                return this.statusField;
-            }
-            set {
-                this.statusField = value;
-                this.RaisePropertyChanged("Status");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetCustomersSRsRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
-        public PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRs_Input GetCustomersSRs_Input;
-        
-        public GetCustomersSRsRequest() {
-        }
-        
-        public GetCustomersSRsRequest(PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRs_Input GetCustomersSRs_Input) {
-            this.GetCustomersSRs_Input = GetCustomersSRs_Input;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetCustomersSRsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
-        public PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRs_Output GetCustomersSRs_Output;
-        
-        public GetCustomersSRsResponse() {
-        }
-        
-        public GetCustomersSRsResponse(PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRs_Output GetCustomersSRs_Output) {
-            this.GetCustomersSRs_Output = GetCustomersSRs_Output;
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface GetCustServiceRequestsChannel : PLEXEDC.WEB.UI.SiebelReference.GetCustServiceRequests, System.ServiceModel.IClientChannel {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetCustServiceRequestsClient : System.ServiceModel.ClientBase<PLEXEDC.WEB.UI.SiebelReference.GetCustServiceRequests>, PLEXEDC.WEB.UI.SiebelReference.GetCustServiceRequests {
-        
-        public GetCustServiceRequestsClient() {
-        }
-        
-        public GetCustServiceRequestsClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
-        }
-        
-        public GetCustServiceRequestsClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public GetCustServiceRequestsClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public GetCustServiceRequestsClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRsResponse PLEXEDC.WEB.UI.SiebelReference.GetCustServiceRequests.GetCustomersSRs(PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRsRequest request) {
-            return base.Channel.GetCustomersSRs(request);
-        }
-        
-        public PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRs_Output GetCustomersSRs(PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRs_Input GetCustomersSRs_Input) {
-            PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRsRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRsRequest();
-            inValue.GetCustomersSRs_Input = GetCustomersSRs_Input;
-            PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRsResponse retVal = ((PLEXEDC.WEB.UI.SiebelReference.GetCustServiceRequests)(this)).GetCustomersSRs(inValue);
-            return retVal.GetCustomersSRs_Output;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRsResponse> PLEXEDC.WEB.UI.SiebelReference.GetCustServiceRequests.GetCustomersSRsAsync(PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRsRequest request) {
-            return base.Channel.GetCustomersSRsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRsResponse> GetCustomersSRsAsync(PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRs_Input GetCustomersSRs_Input) {
-            PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRsRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.GetCustomersSRsRequest();
-            inValue.GetCustomersSRs_Input = GetCustomersSRs_Input;
-            return ((PLEXEDC.WEB.UI.SiebelReference.GetCustServiceRequests)(this)).GetCustomersSRsAsync(inValue);
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://siebel.com/CustomUI", ConfigurationName="SiebelReference.QueryServiceRequest")]
-    public interface QueryServiceRequest {
-        
-        // CODEGEN: Generating message contract since the operation QuerySR is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:QuerySR", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        PLEXEDC.WEB.UI.SiebelReference.QuerySRResponse QuerySR(PLEXEDC.WEB.UI.SiebelReference.QuerySRRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:QuerySR", ReplyAction="*")]
-        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.QuerySRResponse> QuerySRAsync(PLEXEDC.WEB.UI.SiebelReference.QuerySRRequest request);
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
-    public partial class QuerySR_Input : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string serviceRequestNumberField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string ServiceRequestNumber {
-            get {
-                return this.serviceRequestNumberField;
-            }
-            set {
-                this.serviceRequestNumberField = value;
-                this.RaisePropertyChanged("ServiceRequestNumber");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
-    public partial class QuerySR_Output : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string areaField;
-        
-        private string error_spcCodeField;
-        
-        private string error_spcMessageField;
-        
-        private string serviceRequestStatusField;
-        
-        private string statusField;
-        
-        private string subAreaField;
-        
-        private string typeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string Area {
             get {
                 return this.areaField;
@@ -1317,38 +242,14 @@ namespace PLEXEDC.WEB.UI.SiebelReference {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Error_spcCode {
-            get {
-                return this.error_spcCodeField;
-            }
-            set {
-                this.error_spcCodeField = value;
-                this.RaisePropertyChanged("Error_spcCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string Error_spcMessage {
-            get {
-                return this.error_spcMessageField;
-            }
-            set {
-                this.error_spcMessageField = value;
-                this.RaisePropertyChanged("Error_spcMessage");
-            }
-        }
-        
-        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string ServiceRequestStatus {
+        public string SubArea {
             get {
-                return this.serviceRequestStatusField;
+                return this.subAreaField;
             }
             set {
-                this.serviceRequestStatusField = value;
-                this.RaisePropertyChanged("ServiceRequestStatus");
+                this.subAreaField = value;
+                this.RaisePropertyChanged("SubArea");
             }
         }
         
@@ -1366,25 +267,136 @@ namespace PLEXEDC.WEB.UI.SiebelReference {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public string SubArea {
+        public string SubStatus {
             get {
-                return this.subAreaField;
+                return this.subStatusField;
             }
             set {
-                this.subAreaField = value;
-                this.RaisePropertyChanged("SubArea");
+                this.subStatusField = value;
+                this.RaisePropertyChanged("SubStatus");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public string Type {
+        public string Priority {
             get {
-                return this.typeField;
+                return this.priorityField;
             }
             set {
-                this.typeField = value;
-                this.RaisePropertyChanged("Type");
+                this.priorityField = value;
+                this.RaisePropertyChanged("Priority");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string Summary {
+            get {
+                return this.summaryField;
+            }
+            set {
+                this.summaryField = value;
+                this.RaisePropertyChanged("Summary");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string ClosureComments {
+            get {
+                return this.closureCommentsField;
+            }
+            set {
+                this.closureCommentsField = value;
+                this.RaisePropertyChanged("ClosureComments");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string CitizenId {
+            get {
+                return this.citizenIdField;
+            }
+            set {
+                this.citizenIdField = value;
+                this.RaisePropertyChanged("CitizenId");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
+    public partial class EDC_spcSR_spcDetails_Output : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private ServiceRequest[] listOf_ServiceRequestField;
+        
+        private string error_spcCodeField;
+        
+        private string error_spcMessageField;
+        
+        private string statusField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://www.siebel.com/xml/HDK%20Service%20Request", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
+        public ServiceRequest[] ListOf_ServiceRequest {
+            get {
+                return this.listOf_ServiceRequestField;
+            }
+            set {
+                this.listOf_ServiceRequestField = value;
+                this.RaisePropertyChanged("ListOf_ServiceRequest");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Error_spcCode {
+            get {
+                return this.error_spcCodeField;
+            }
+            set {
+                this.error_spcCodeField = value;
+                this.RaisePropertyChanged("Error_spcCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Error_spcMessage {
+            get {
+                return this.error_spcMessageField;
+            }
+            set {
+                this.error_spcMessageField = value;
+                this.RaisePropertyChanged("Error_spcMessage");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string Status {
+            get {
+                return this.statusField;
+            }
+            set {
+                this.statusField = value;
+                this.RaisePropertyChanged("Status");
             }
         }
         
@@ -1402,16 +414,16 @@ namespace PLEXEDC.WEB.UI.SiebelReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class QuerySRRequest {
+    public partial class EDC_spcSR_spcDetailsRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
-        public PLEXEDC.WEB.UI.SiebelReference.QuerySR_Input QuerySR_Input;
+        public PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetails_Input EDC_spcSR_spcDetails_Input;
         
-        public QuerySRRequest() {
+        public EDC_spcSR_spcDetailsRequest() {
         }
         
-        public QuerySRRequest(PLEXEDC.WEB.UI.SiebelReference.QuerySR_Input QuerySR_Input) {
-            this.QuerySR_Input = QuerySR_Input;
+        public EDC_spcSR_spcDetailsRequest(PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetails_Input EDC_spcSR_spcDetails_Input) {
+            this.EDC_spcSR_spcDetails_Input = EDC_spcSR_spcDetails_Input;
         }
     }
     
@@ -1419,67 +431,736 @@ namespace PLEXEDC.WEB.UI.SiebelReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class QuerySRResponse {
+    public partial class EDC_spcSR_spcDetailsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
-        public PLEXEDC.WEB.UI.SiebelReference.QuerySR_Output QuerySR_Output;
+        public PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetails_Output EDC_spcSR_spcDetails_Output;
         
-        public QuerySRResponse() {
+        public EDC_spcSR_spcDetailsResponse() {
         }
         
-        public QuerySRResponse(PLEXEDC.WEB.UI.SiebelReference.QuerySR_Output QuerySR_Output) {
-            this.QuerySR_Output = QuerySR_Output;
+        public EDC_spcSR_spcDetailsResponse(PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetails_Output EDC_spcSR_spcDetails_Output) {
+            this.EDC_spcSR_spcDetails_Output = EDC_spcSR_spcDetails_Output;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface QueryServiceRequestChannel : PLEXEDC.WEB.UI.SiebelReference.QueryServiceRequest, System.ServiceModel.IClientChannel {
+    public interface EDC_spcSR_spcDetailsChannel : PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetails, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class QueryServiceRequestClient : System.ServiceModel.ClientBase<PLEXEDC.WEB.UI.SiebelReference.QueryServiceRequest>, PLEXEDC.WEB.UI.SiebelReference.QueryServiceRequest {
+    public partial class EDC_spcSR_spcDetailsClient : System.ServiceModel.ClientBase<PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetails>, PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetails {
         
-        public QueryServiceRequestClient() {
+        public EDC_spcSR_spcDetailsClient() {
         }
         
-        public QueryServiceRequestClient(string endpointConfigurationName) : 
+        public EDC_spcSR_spcDetailsClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public QueryServiceRequestClient(string endpointConfigurationName, string remoteAddress) : 
+        public EDC_spcSR_spcDetailsClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public QueryServiceRequestClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public EDC_spcSR_spcDetailsClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public QueryServiceRequestClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public EDC_spcSR_spcDetailsClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        PLEXEDC.WEB.UI.SiebelReference.QuerySRResponse PLEXEDC.WEB.UI.SiebelReference.QueryServiceRequest.QuerySR(PLEXEDC.WEB.UI.SiebelReference.QuerySRRequest request) {
-            return base.Channel.QuerySR(request);
+        PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetailsResponse PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetails.EDC_spcSR_spcDetails(PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetailsRequest request) {
+            return base.Channel.EDC_spcSR_spcDetails(request);
         }
         
-        public PLEXEDC.WEB.UI.SiebelReference.QuerySR_Output QuerySR(PLEXEDC.WEB.UI.SiebelReference.QuerySR_Input QuerySR_Input) {
-            PLEXEDC.WEB.UI.SiebelReference.QuerySRRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.QuerySRRequest();
-            inValue.QuerySR_Input = QuerySR_Input;
-            PLEXEDC.WEB.UI.SiebelReference.QuerySRResponse retVal = ((PLEXEDC.WEB.UI.SiebelReference.QueryServiceRequest)(this)).QuerySR(inValue);
-            return retVal.QuerySR_Output;
+        public PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetails_Output EDC_spcSR_spcDetails(PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetails_Input EDC_spcSR_spcDetails_Input) {
+            PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetailsRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetailsRequest();
+            inValue.EDC_spcSR_spcDetails_Input = EDC_spcSR_spcDetails_Input;
+            PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetailsResponse retVal = ((PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetails)(this)).EDC_spcSR_spcDetails(inValue);
+            return retVal.EDC_spcSR_spcDetails_Output;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.QuerySRResponse> PLEXEDC.WEB.UI.SiebelReference.QueryServiceRequest.QuerySRAsync(PLEXEDC.WEB.UI.SiebelReference.QuerySRRequest request) {
-            return base.Channel.QuerySRAsync(request);
+        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetailsResponse> PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetails.EDC_spcSR_spcDetailsAsync(PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetailsRequest request) {
+            return base.Channel.EDC_spcSR_spcDetailsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.QuerySRResponse> QuerySRAsync(PLEXEDC.WEB.UI.SiebelReference.QuerySR_Input QuerySR_Input) {
-            PLEXEDC.WEB.UI.SiebelReference.QuerySRRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.QuerySRRequest();
-            inValue.QuerySR_Input = QuerySR_Input;
-            return ((PLEXEDC.WEB.UI.SiebelReference.QueryServiceRequest)(this)).QuerySRAsync(inValue);
+        public System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetailsResponse> EDC_spcSR_spcDetailsAsync(PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetails_Input EDC_spcSR_spcDetails_Input) {
+            PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetailsRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetailsRequest();
+            inValue.EDC_spcSR_spcDetails_Input = EDC_spcSR_spcDetails_Input;
+            return ((PLEXEDC.WEB.UI.SiebelReference.EDC_spcSR_spcDetails)(this)).EDC_spcSR_spcDetailsAsync(inValue);
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://siebel.com/CustomUI", ConfigurationName="SiebelReference.EDC_spcUpdate_spcSR")]
+    public interface EDC_spcUpdate_spcSR {
+        
+        // CODEGEN: Generating message contract since the operation Update_spcSR is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:Update_spcSR", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        PLEXEDC.WEB.UI.SiebelReference.Update_spcSRResponse Update_spcSR(PLEXEDC.WEB.UI.SiebelReference.Update_spcSRRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:Update_spcSR", ReplyAction="*")]
+        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.Update_spcSRResponse> Update_spcSRAsync(PLEXEDC.WEB.UI.SiebelReference.Update_spcSRRequest request);
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
+    public partial class Update_spcSR_Input : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string rootCauseField;
+        
+        private string summaryField;
+        
+        private string closureCommentsField;
+        
+        private string serviceRequestStatusField;
+        
+        private string serviceRequestNumberField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string RootCause {
+            get {
+                return this.rootCauseField;
+            }
+            set {
+                this.rootCauseField = value;
+                this.RaisePropertyChanged("RootCause");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Summary {
+            get {
+                return this.summaryField;
+            }
+            set {
+                this.summaryField = value;
+                this.RaisePropertyChanged("Summary");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string ClosureComments {
+            get {
+                return this.closureCommentsField;
+            }
+            set {
+                this.closureCommentsField = value;
+                this.RaisePropertyChanged("ClosureComments");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string ServiceRequestStatus {
+            get {
+                return this.serviceRequestStatusField;
+            }
+            set {
+                this.serviceRequestStatusField = value;
+                this.RaisePropertyChanged("ServiceRequestStatus");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string ServiceRequestNumber {
+            get {
+                return this.serviceRequestNumberField;
+            }
+            set {
+                this.serviceRequestNumberField = value;
+                this.RaisePropertyChanged("ServiceRequestNumber");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
+    public partial class Update_spcSR_Output : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string error_spcCodeField;
+        
+        private string error_spcMessageField;
+        
+        private string statusField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Error_spcCode {
+            get {
+                return this.error_spcCodeField;
+            }
+            set {
+                this.error_spcCodeField = value;
+                this.RaisePropertyChanged("Error_spcCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Error_spcMessage {
+            get {
+                return this.error_spcMessageField;
+            }
+            set {
+                this.error_spcMessageField = value;
+                this.RaisePropertyChanged("Error_spcMessage");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Status {
+            get {
+                return this.statusField;
+            }
+            set {
+                this.statusField = value;
+                this.RaisePropertyChanged("Status");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class Update_spcSRRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
+        public PLEXEDC.WEB.UI.SiebelReference.Update_spcSR_Input Update_spcSR_Input;
+        
+        public Update_spcSRRequest() {
+        }
+        
+        public Update_spcSRRequest(PLEXEDC.WEB.UI.SiebelReference.Update_spcSR_Input Update_spcSR_Input) {
+            this.Update_spcSR_Input = Update_spcSR_Input;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class Update_spcSRResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
+        public PLEXEDC.WEB.UI.SiebelReference.Update_spcSR_Output Update_spcSR_Output;
+        
+        public Update_spcSRResponse() {
+        }
+        
+        public Update_spcSRResponse(PLEXEDC.WEB.UI.SiebelReference.Update_spcSR_Output Update_spcSR_Output) {
+            this.Update_spcSR_Output = Update_spcSR_Output;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface EDC_spcUpdate_spcSRChannel : PLEXEDC.WEB.UI.SiebelReference.EDC_spcUpdate_spcSR, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class EDC_spcUpdate_spcSRClient : System.ServiceModel.ClientBase<PLEXEDC.WEB.UI.SiebelReference.EDC_spcUpdate_spcSR>, PLEXEDC.WEB.UI.SiebelReference.EDC_spcUpdate_spcSR {
+        
+        public EDC_spcUpdate_spcSRClient() {
+        }
+        
+        public EDC_spcUpdate_spcSRClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public EDC_spcUpdate_spcSRClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public EDC_spcUpdate_spcSRClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public EDC_spcUpdate_spcSRClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        PLEXEDC.WEB.UI.SiebelReference.Update_spcSRResponse PLEXEDC.WEB.UI.SiebelReference.EDC_spcUpdate_spcSR.Update_spcSR(PLEXEDC.WEB.UI.SiebelReference.Update_spcSRRequest request) {
+            return base.Channel.Update_spcSR(request);
+        }
+        
+        public PLEXEDC.WEB.UI.SiebelReference.Update_spcSR_Output Update_spcSR(PLEXEDC.WEB.UI.SiebelReference.Update_spcSR_Input Update_spcSR_Input) {
+            PLEXEDC.WEB.UI.SiebelReference.Update_spcSRRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.Update_spcSRRequest();
+            inValue.Update_spcSR_Input = Update_spcSR_Input;
+            PLEXEDC.WEB.UI.SiebelReference.Update_spcSRResponse retVal = ((PLEXEDC.WEB.UI.SiebelReference.EDC_spcUpdate_spcSR)(this)).Update_spcSR(inValue);
+            return retVal.Update_spcSR_Output;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.Update_spcSRResponse> PLEXEDC.WEB.UI.SiebelReference.EDC_spcUpdate_spcSR.Update_spcSRAsync(PLEXEDC.WEB.UI.SiebelReference.Update_spcSRRequest request) {
+            return base.Channel.Update_spcSRAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.Update_spcSRResponse> Update_spcSRAsync(PLEXEDC.WEB.UI.SiebelReference.Update_spcSR_Input Update_spcSR_Input) {
+            PLEXEDC.WEB.UI.SiebelReference.Update_spcSRRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.Update_spcSRRequest();
+            inValue.Update_spcSR_Input = Update_spcSR_Input;
+            return ((PLEXEDC.WEB.UI.SiebelReference.EDC_spcUpdate_spcSR)(this)).Update_spcSRAsync(inValue);
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://siebel.com/CustomUI", ConfigurationName="SiebelReference.EDC_spcQuery_spcSR")]
+    public interface EDC_spcQuery_spcSR {
+        
+        // CODEGEN: Generating message contract since the operation Query_spcSR is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:Query_spcSR", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        PLEXEDC.WEB.UI.SiebelReference.Query_spcSRResponse Query_spcSR(PLEXEDC.WEB.UI.SiebelReference.Query_spcSRRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:Query_spcSR", ReplyAction="*")]
+        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.Query_spcSRResponse> Query_spcSRAsync(PLEXEDC.WEB.UI.SiebelReference.Query_spcSRRequest request);
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
+    public partial class Query_spcSR_Input : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string sRNumberField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string SRNumber {
+            get {
+                return this.sRNumberField;
+            }
+            set {
+                this.sRNumberField = value;
+                this.RaisePropertyChanged("SRNumber");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
+    public partial class Query_spcSR_Output : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string descriptionField;
+        
+        private string error_spcCodeField;
+        
+        private string error_spcMessageField;
+        
+        private string sRStatusField;
+        
+        private string statusField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("Description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Error_spcCode {
+            get {
+                return this.error_spcCodeField;
+            }
+            set {
+                this.error_spcCodeField = value;
+                this.RaisePropertyChanged("Error_spcCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Error_spcMessage {
+            get {
+                return this.error_spcMessageField;
+            }
+            set {
+                this.error_spcMessageField = value;
+                this.RaisePropertyChanged("Error_spcMessage");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string SRStatus {
+            get {
+                return this.sRStatusField;
+            }
+            set {
+                this.sRStatusField = value;
+                this.RaisePropertyChanged("SRStatus");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string Status {
+            get {
+                return this.statusField;
+            }
+            set {
+                this.statusField = value;
+                this.RaisePropertyChanged("Status");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class Query_spcSRRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
+        public PLEXEDC.WEB.UI.SiebelReference.Query_spcSR_Input Query_spcSR_Input;
+        
+        public Query_spcSRRequest() {
+        }
+        
+        public Query_spcSRRequest(PLEXEDC.WEB.UI.SiebelReference.Query_spcSR_Input Query_spcSR_Input) {
+            this.Query_spcSR_Input = Query_spcSR_Input;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class Query_spcSRResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
+        public PLEXEDC.WEB.UI.SiebelReference.Query_spcSR_Output Query_spcSR_Output;
+        
+        public Query_spcSRResponse() {
+        }
+        
+        public Query_spcSRResponse(PLEXEDC.WEB.UI.SiebelReference.Query_spcSR_Output Query_spcSR_Output) {
+            this.Query_spcSR_Output = Query_spcSR_Output;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface EDC_spcQuery_spcSRChannel : PLEXEDC.WEB.UI.SiebelReference.EDC_spcQuery_spcSR, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class EDC_spcQuery_spcSRClient : System.ServiceModel.ClientBase<PLEXEDC.WEB.UI.SiebelReference.EDC_spcQuery_spcSR>, PLEXEDC.WEB.UI.SiebelReference.EDC_spcQuery_spcSR {
+        
+        public EDC_spcQuery_spcSRClient() {
+        }
+        
+        public EDC_spcQuery_spcSRClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public EDC_spcQuery_spcSRClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public EDC_spcQuery_spcSRClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public EDC_spcQuery_spcSRClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        PLEXEDC.WEB.UI.SiebelReference.Query_spcSRResponse PLEXEDC.WEB.UI.SiebelReference.EDC_spcQuery_spcSR.Query_spcSR(PLEXEDC.WEB.UI.SiebelReference.Query_spcSRRequest request) {
+            return base.Channel.Query_spcSR(request);
+        }
+        
+        public PLEXEDC.WEB.UI.SiebelReference.Query_spcSR_Output Query_spcSR(PLEXEDC.WEB.UI.SiebelReference.Query_spcSR_Input Query_spcSR_Input) {
+            PLEXEDC.WEB.UI.SiebelReference.Query_spcSRRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.Query_spcSRRequest();
+            inValue.Query_spcSR_Input = Query_spcSR_Input;
+            PLEXEDC.WEB.UI.SiebelReference.Query_spcSRResponse retVal = ((PLEXEDC.WEB.UI.SiebelReference.EDC_spcQuery_spcSR)(this)).Query_spcSR(inValue);
+            return retVal.Query_spcSR_Output;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.Query_spcSRResponse> PLEXEDC.WEB.UI.SiebelReference.EDC_spcQuery_spcSR.Query_spcSRAsync(PLEXEDC.WEB.UI.SiebelReference.Query_spcSRRequest request) {
+            return base.Channel.Query_spcSRAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.Query_spcSRResponse> Query_spcSRAsync(PLEXEDC.WEB.UI.SiebelReference.Query_spcSR_Input Query_spcSR_Input) {
+            PLEXEDC.WEB.UI.SiebelReference.Query_spcSRRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.Query_spcSRRequest();
+            inValue.Query_spcSR_Input = Query_spcSR_Input;
+            return ((PLEXEDC.WEB.UI.SiebelReference.EDC_spcQuery_spcSR)(this)).Query_spcSRAsync(inValue);
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://siebel.com/CustomUI", ConfigurationName="SiebelReference.EDC_spcContact_spcGet_spcSR_spcActivity_spcWF")]
+    public interface EDC_spcContact_spcGet_spcSR_spcActivity_spcWF {
+        
+        // CODEGEN: Generating message contract since the operation EDC_spcGet_spcSR_spcActivities is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:EDC_spcGet_spcSR_spcActivities", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivitiesResponse EDC_spcGet_spcSR_spcActivities(PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivitiesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="document/http://siebel.com/CustomUI:EDC_spcGet_spcSR_spcActivities", ReplyAction="*")]
+        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivitiesResponse> EDC_spcGet_spcSR_spcActivitiesAsync(PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivitiesRequest request);
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
+    public partial class EDC_spcGet_spcSR_spcActivities_Input : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string serviceRequestNumberField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string ServiceRequestNumber {
+            get {
+                return this.serviceRequestNumberField;
+            }
+            set {
+                this.serviceRequestNumberField = value;
+                this.RaisePropertyChanged("ServiceRequestNumber");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://siebel.com/CustomUI")]
+    public partial class EDC_spcGet_spcSR_spcActivities_Output : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private ServiceRequest1[] listOf_ServiceRequestField;
+        
+        private string error_spcCodeField;
+        
+        private string error_spcMessageField;
+        
+        private string statusField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://www.siebel.com/xml/XMLP%20Account", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
+        public ServiceRequest1[] ListOf_ServiceRequest {
+            get {
+                return this.listOf_ServiceRequestField;
+            }
+            set {
+                this.listOf_ServiceRequestField = value;
+                this.RaisePropertyChanged("ListOf_ServiceRequest");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Error_spcCode {
+            get {
+                return this.error_spcCodeField;
+            }
+            set {
+                this.error_spcCodeField = value;
+                this.RaisePropertyChanged("Error_spcCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Error_spcMessage {
+            get {
+                return this.error_spcMessageField;
+            }
+            set {
+                this.error_spcMessageField = value;
+                this.RaisePropertyChanged("Error_spcMessage");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string Status {
+            get {
+                return this.statusField;
+            }
+            set {
+                this.statusField = value;
+                this.RaisePropertyChanged("Status");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class EDC_spcGet_spcSR_spcActivitiesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
+        public PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivities_Input EDC_spcGet_spcSR_spcActivities_Input;
+        
+        public EDC_spcGet_spcSR_spcActivitiesRequest() {
+        }
+        
+        public EDC_spcGet_spcSR_spcActivitiesRequest(PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivities_Input EDC_spcGet_spcSR_spcActivities_Input) {
+            this.EDC_spcGet_spcSR_spcActivities_Input = EDC_spcGet_spcSR_spcActivities_Input;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class EDC_spcGet_spcSR_spcActivitiesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://siebel.com/CustomUI", Order=0)]
+        public PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivities_Output EDC_spcGet_spcSR_spcActivities_Output;
+        
+        public EDC_spcGet_spcSR_spcActivitiesResponse() {
+        }
+        
+        public EDC_spcGet_spcSR_spcActivitiesResponse(PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivities_Output EDC_spcGet_spcSR_spcActivities_Output) {
+            this.EDC_spcGet_spcSR_spcActivities_Output = EDC_spcGet_spcSR_spcActivities_Output;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface EDC_spcContact_spcGet_spcSR_spcActivity_spcWFChannel : PLEXEDC.WEB.UI.SiebelReference.EDC_spcContact_spcGet_spcSR_spcActivity_spcWF, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class EDC_spcContact_spcGet_spcSR_spcActivity_spcWFClient : System.ServiceModel.ClientBase<PLEXEDC.WEB.UI.SiebelReference.EDC_spcContact_spcGet_spcSR_spcActivity_spcWF>, PLEXEDC.WEB.UI.SiebelReference.EDC_spcContact_spcGet_spcSR_spcActivity_spcWF {
+        
+        public EDC_spcContact_spcGet_spcSR_spcActivity_spcWFClient() {
+        }
+        
+        public EDC_spcContact_spcGet_spcSR_spcActivity_spcWFClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public EDC_spcContact_spcGet_spcSR_spcActivity_spcWFClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public EDC_spcContact_spcGet_spcSR_spcActivity_spcWFClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public EDC_spcContact_spcGet_spcSR_spcActivity_spcWFClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivitiesResponse PLEXEDC.WEB.UI.SiebelReference.EDC_spcContact_spcGet_spcSR_spcActivity_spcWF.EDC_spcGet_spcSR_spcActivities(PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivitiesRequest request) {
+            return base.Channel.EDC_spcGet_spcSR_spcActivities(request);
+        }
+        
+        public PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivities_Output EDC_spcGet_spcSR_spcActivities(PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivities_Input EDC_spcGet_spcSR_spcActivities_Input) {
+            PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivitiesRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivitiesRequest();
+            inValue.EDC_spcGet_spcSR_spcActivities_Input = EDC_spcGet_spcSR_spcActivities_Input;
+            PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivitiesResponse retVal = ((PLEXEDC.WEB.UI.SiebelReference.EDC_spcContact_spcGet_spcSR_spcActivity_spcWF)(this)).EDC_spcGet_spcSR_spcActivities(inValue);
+            return retVal.EDC_spcGet_spcSR_spcActivities_Output;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivitiesResponse> PLEXEDC.WEB.UI.SiebelReference.EDC_spcContact_spcGet_spcSR_spcActivity_spcWF.EDC_spcGet_spcSR_spcActivitiesAsync(PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivitiesRequest request) {
+            return base.Channel.EDC_spcGet_spcSR_spcActivitiesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivitiesResponse> EDC_spcGet_spcSR_spcActivitiesAsync(PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivities_Input EDC_spcGet_spcSR_spcActivities_Input) {
+            PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivitiesRequest inValue = new PLEXEDC.WEB.UI.SiebelReference.EDC_spcGet_spcSR_spcActivitiesRequest();
+            inValue.EDC_spcGet_spcSR_spcActivities_Input = EDC_spcGet_spcSR_spcActivities_Input;
+            return ((PLEXEDC.WEB.UI.SiebelReference.EDC_spcContact_spcGet_spcSR_spcActivity_spcWF)(this)).EDC_spcGet_spcSR_spcActivitiesAsync(inValue);
         }
     }
 }

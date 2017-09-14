@@ -59,7 +59,6 @@ C:\NewProjects\plexada\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\Microsoft.P
 C:\NewProjects\plexada\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\obj\Debug\PLEXEDC.WEB.UI.Tests.csprojResolveAssemblyReference.cache
 C:\NewProjects\plexada\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\obj\Debug\PLEXEDC.WEB.UI.Tests.dll
 C:\NewProjects\plexada\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\obj\Debug\PLEXEDC.WEB.UI.Tests.pdb
-C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\obj\Debug\PLEXEDC.WEB.UI.Tests.csprojResolveAssemblyReference.cache
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\PLEXEDC.WEB.UI.Tests.dll.config
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\PLEXEDC.WEB.UI.Tests.dll
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\PLEXEDC.WEB.UI.Tests.pdb
@@ -78,11 +77,12 @@ C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bi
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\System.Web.Optimization.dll
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\Owin.dll
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\System.Web.Http.dll
-C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\PLEXEDC.WEB.BAL.dll
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\PLEXEDC.WEB.DAL.dll
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\EntityFramework.dll
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\PLEXEDC.WEB.BAL.dll
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\Microsoft.Practices.Unity.dll
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\Microsoft.Owin.Security.dll
@@ -103,11 +103,12 @@ C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bi
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\Microsoft.Owin.xml
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\System.Web.Optimization.xml
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\System.Web.Http.xml
-C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\PLEXEDC.WEB.BAL.pdb
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\PLEXEDC.WEB.DAL.pdb
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\EntityFramework.xml
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\PLEXEDC.WEB.BAL.pdb
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\Microsoft.Practices.Unity.xml
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\Microsoft.Owin.Security.xml
@@ -117,5 +118,6 @@ C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bi
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\obj\Debug\PLEXEDC.WEB.UI.Tests.csprojResolveAssemblyReference.cache
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\obj\Debug\PLEXEDC.WEB.UI.Tests.dll
 C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.UI.Tests\obj\Debug\PLEXEDC.WEB.UI.Tests.pdb

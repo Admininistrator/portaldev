@@ -1,14 +1,10 @@
 using System;
 using Microsoft.Practices.Unity;
-using Microsoft.Practices.Unity.Configuration;
 using System.Data.Entity;
 using PLEXEDC.WEB.UI.Models;
 using Microsoft.AspNet.Identity;
 using PLEXEDC.WEB.UI.Controllers;
 using Microsoft.AspNet.Identity.EntityFramework;
-using PLEXEDC.WEB.UI.Core;
-using PLEXEDC.WEB.UI.Implementation;
-
 namespace PLEXEDC.WEB.UI.App_Start
 {
     /// <summary>

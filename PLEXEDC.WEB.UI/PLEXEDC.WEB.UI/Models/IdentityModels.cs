@@ -32,5 +32,19 @@ namespace PLEXEDC.WEB.UI.Models
         }
 
         public  DbSet<Person> Person { get; set; }
+
+        public DbSet<SRType> SRType { get; set; }
+
+        public DbSet<SRArea> SRArea { get; set; }
+
+        public DbSet<SRSubArea> SRSubArea { get; set; }
+
+        public DbSet<SRStatus> SRStatus { get; set; }
+
+        public DbSet<SRSubStatus> SRSubStatus { get; set; }
+
+        public DbSet<SRPriority> SRPriority { get; set; }
+
+
     }
 }

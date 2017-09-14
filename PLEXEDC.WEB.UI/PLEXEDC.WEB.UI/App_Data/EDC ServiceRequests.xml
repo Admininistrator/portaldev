@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:mockService id="5f7eb094-000f-4c24-a533-f321901794ab" port="8080" path="/" host="OVH-WIN7" name="EDC ServiceRequests" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting>
+  </con:settings>
+  <con:properties/>
+  <con:mockOperation name="SRActivities" id="6e38a9c6-ac70-4adb-9d7b-32e5aea29c20" interface="EDC_spcContact_spcGet_spcSR_spcActivity_spcWF" operation="EDC_spcGet_spcSR_spcActivities">
+    <con:settings/>
+    <con:defaultResponse>Response 1</con:defaultResponse>
+    <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+    <con:response name="Response 1" id="c1577ffd-665c-4a1b-b9be-911d7dd7d339" httpResponseStatus="200" encoding="UTF-8">
+      <con:settings/>
+      <con:responseContent>
+        <![CDATA[<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <SOAP-ENV:Body>
+      <ns:EDC_spcGet_spcSR_spcActivities_Output xmlns:ns="http://siebel.com/CustomUI">
+         <ListOf_ServiceRequest>
+            <ServiceRequest>
+               <SRNumber>1-1032101</SRNumber>
+               <ListOf_Activity>
+                  <Activity>
+                     <Type>SR Update</Type>
+                     <Status>Unscheduled</Status>
+                     <Priority>2-High</Priority>
+                     <Description>This is an additional test</Description>
+                  </Activity>
+                  <Activity>
+                     <Type>SR Update</Type>
+                     <Status>Sent</Status>
+                     <Priority>1-ASAP</Priority>
+                     <Description>We sent a mail to card team</Description>
+                  </Activity>
+                  <Activity>
+                     <Type>SR Update</Type>
+                     <Status>In Progress</Status>
+                     <Priority>3-Medium</Priority>
+                     <Description>This was investigated today</Description>
+                  </Activity>
+               </ListOf_Activity>
+            </ServiceRequest>
+         </ListOf_ServiceRequest>
+         <ns:Error_spcCode/>
+         <ns:Error_spcMessage/>
+         <ns:Status>200</ns:Status>
+      </ns:EDC_spcGet_spcSR_spcActivities_Output>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>]]>
+      </con:responseContent>
+      <con:wsaConfig mustUnderstand="NONE" version="200508" action="document/http://siebel.com/CustomUI:EDC_spcGet_spcSR_spcActivities"/>
+    </con:response>
+    <con:dispatchConfig/>
+  </con:mockOperation>
+  <con:mockOperation name="SRDetails" id="205d9275-6f64-4eb2-8e51-02accd00c53d" interface="EDC_spcQuery_spcSR" operation="Query_spcSR">
+    <con:settings/>
+    <con:defaultResponse>Response 1</con:defaultResponse>
+    <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+    <con:response name="Response 1" id="e5d10592-2cee-4cbb-8856-2d17f6704183" httpResponseStatus="200" encoding="UTF-8">
+      <con:settings/>
+      <con:responseContent>
+        <![CDATA[<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <SOAP-ENV:Body>
+      <ns:Query_spcSR_Output xmlns:ns="http://siebel.com/CustomUI">
+         <ns:Description>No debit alert</ns:Description>
+         <ns:Error_spcCode/>
+         <ns:Error_spcMessage/>
+         <ns:SRStatus>Open</ns:SRStatus>
+         <ns:Status>200</ns:Status>
+      </ns:Query_spcSR_Output>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>]]>
+      </con:responseContent>
+      <con:wsaConfig mustUnderstand="NONE" version="200508" action="document/http://siebel.com/CustomUI:Query_spcSR"/>
+    </con:response>
+    <con:dispatchConfig/>
+  </con:mockOperation>
+  <con:mockOperation name="SRContactList" id="500bba10-483e-4e6e-8baf-3c8104c7589e" interface="EDC_spcSR_spcDetails" operation="EDC_spcSR_spcDetails">
+    <con:settings/>
+    <con:defaultResponse>Response 1</con:defaultResponse>
+    <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+    <con:response name="Response 1" id="a8117f0c-4d97-419a-a8f3-15b4e7c170f3" httpResponseStatus="200" encoding="UTF-8">
+      <con:settings/>
+      <con:responseContent>
+        <![CDATA[<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <SOAP-ENV:Body>
+      <ns:EDC_spcSR_spcDetails_Output xmlns:ns="http://siebel.com/CustomUI">
+         <ListOf_ServiceRequest>
+            <ServiceRequest>
+               <SRNumber>1-1032101</SRNumber>
+               <Type>Complaint</Type>
+               <Area>Cheque</Area>
+               <SubArea>Cheque Confirmation</SubArea>
+               <Status>Open</Status>
+               <SubStatus>Unassigned</SubStatus>
+               <Priority>3-Medium</Priority>
+               <Summary>No debit alert</Summary>
+               <ClosureComments/>
+               <CitizenId>1-HMD0</CitizenId>
+            </ServiceRequest>
+            <ServiceRequest>
+               <SRNumber>1-1201412</SRNumber>
+               <Type>Enquiry</Type>
+               <Area>Internet Banking</Area>
+               <SubArea>Fees and Charges</SubArea>
+               <Status>Open</Status>
+               <SubStatus>Unassigned</SubStatus>
+               <Priority>3-Medium</Priority>
+               <Summary>Cool not good ? ?</Summary>
+               <ClosureComments>? ?</ClosureComments>
+               <CitizenId>1-HMD0</CitizenId>
+            </ServiceRequest>
+         </ListOf_ServiceRequest>
+         <ns:Error_spcCode/>
+         <ns:Error_spcMessage/>
+         <ns:Status>200</ns:Status>
+      </ns:EDC_spcSR_spcDetails_Output>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>]]>
+      </con:responseContent>
+      <con:wsaConfig mustUnderstand="NONE" version="200508" action="document/http://siebel.com/CustomUI:EDC_spcSR_spcDetails"/>
+    </con:response>
+    <con:dispatchConfig/>
+  </con:mockOperation>
+  <con:mockOperation name="Update_spcSR" id="d946b89b-6a30-4497-8bd9-e7f895dd6838" interface="EDC_spcUpdate_spcSR" operation="Update_spcSR">
+    <con:settings/>
+    <con:defaultResponse>Response 1</con:defaultResponse>
+    <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+    <con:response name="Response 1" id="a37cf35b-79e7-4af1-8670-5021067d98d4" httpResponseStatus="200" encoding="UTF-8">
+      <con:settings/>
+      <con:responseContent>
+        <![CDATA[<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <SOAP-ENV:Body>
+      <ns:Update_spcSR_Output xmlns:ns="http://siebel.com/CustomUI">
+         <ns:Error_spcCode/>
+         <ns:Error_spcMessage/>
+         <ns:Status>200</ns:Status>
+      </ns:Update_spcSR_Output>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>]]>
+      </con:responseContent>
+      <con:wsaConfig mustUnderstand="NONE" version="200508" action="document/http://siebel.com/CustomUI:Update_spcSR"/>
+    </con:response>
+    <con:dispatchConfig/>
+  </con:mockOperation>
+</con:mockService>

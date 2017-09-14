@@ -1,0 +1,122 @@
+﻿@model PLEXEDC.WEB.UI.Models.CustomerAccountViewModel
+
+@{
+    ViewBag.Title = "Account";
+}
+
+@section scripts{
+    <script src="~/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+    <script>
+        $('#datetimepicker1').datepicker();
+        $('#datetimepicker2').datepicker();
+    </script>
+}
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading panel-heading-custom">
+                <h6>Account Details</h6>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">Infoware ID: @Model.InfowareId</li>
+                    <li class="list-group-item">Account Name: @Model.AccountNumber </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading panel-heading-custom">
+                <h6>Portfolio</h6>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#"><span>Investment Statement</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading panel-heading-custom">
+                <h6>Account Summary</h6>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item"><a data-target="#stockListingModal" data-toggle="modal">Cash Balances</a></li>
+                    <li class="list-group-item">Margin Allowed - </li>
+                    <li class="list-group-item">Uncleared Effects - </li>
+                    <li class="list-group-item">Available Trading Funds - </li>
+                    <li class="list-group-item"><a data-target="#stockListingModal" data-toggle="modal">PortFolio Value</a></li>
+
+                </ul>
+            </div>
+            <div class="panel-footer">
+                <a data-target="#transactionModal" data-toggle="modal">Transactions</a>
+            </div>
+        </div>
+        @Html.Partial("_stockListing")
+
+        @Html.Partial("_transactionListing")
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-default ">
+            <div class="panel-heading panel-heading-custom">
+                <h6>Performance Report</h6>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class='col-sm-6'>
+                        <div class="form-group">
+                            <div class='input-group date' id="datetimepicker1">
+                                <input type='text'  class="form-control" placeholder="Start Date" /> 
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class='col-sm-6'>
+                        <div class="form-group">
+                            <div class='input-group date' id="datetimepicker2"> 
+                                <input type='text'  class="form-control date" placeholder="End Date" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="#" class="btn btn-custom">Go</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="#">Statement</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

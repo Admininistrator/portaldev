@@ -1,6 +1,26 @@
-﻿body {
+﻿
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('../font-roboto/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../font-roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+html {
+    /*font-family: sans-serif;*/
+    font-family: Roboto-Regular !important;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
+     font-family: Roboto-Medium !important;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -40,3 +60,21 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+
+
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.btn-custom {
+    color: #fff;
+    background-color: #bed600;
+}
+
+.panel-heading-custom{
+    color: #fff !important;
+    background-color:#0082bb !important;
+}
+
+    

@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using PLEXEDC.WEB.INFOWARE.DAL.Model;
-using System.Web;
-using System.Net;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
-using PLEXEDC.WEB.BAL.Models;
-using PLEXEDC.WEB.BAL.Model;
 using PLEXEDC.WEB.BAL.Core;
+using PLEXEDC.WEB.DAL.Models;
 
 namespace PLEXEDC.WEB.BAL.Implementation
 {
-    public class InfowareService: IInfowareService
+    public class InfowareService : IInfowareService
     {
         public InfowareService()
         {
@@ -19,30 +15,38 @@ namespace PLEXEDC.WEB.BAL.Implementation
         }
         public List<CSCSNumber> GetCSCSNumber(string sessionId, string inforwareId)
         {
-
-            string url = "http://192.168.2.27/IWAPISvcs/IWAPISvcs.svc/api/json/CustInfo/";
-            url +=sessionId+"/"+inforwareId+"/1";
-            var client = new HttpClient();
-             string jsonString = client.GetStringAsync(url).Result;
-            JObject obj = JObject.Parse(jsonString);
-
-            JToken row = obj["DataTable"]["Rows"];
-
             List<CSCSNumber> cscsNumber = new List<CSCSNumber>();
-            if (row is JArray)
+            try
             {
-                foreach (var value in row.Children<JToken>())
+                string url = "http://192.168.2.27/IWAPISvcs/IWAPISvcs.svc/api/json/CustInfo/";
+                url += sessionId + "/" + inforwareId + "/1";
+                var client = new HttpClient();
+                string jsonString = client.GetStringAsync(url).Result;
+                JObject obj = JObject.Parse(jsonString);
+
+                JToken row = obj["DataTable"]["Rows"];
+
+
+                if (row is JArray)
                 {
-                    cscsNumber.Add(new CSCSNumber
+                    foreach (var value in row.Children<JToken>())
                     {
-                        CsCsAcct = value.First["Value"].ToString(),
-                        CsCsReg = value[1]["Value"].ToString(),
-                        CSCSName = value[2]["Value"].ToString(),
+                        cscsNumber.Add(new CSCSNumber
+                        {
+                            CsCsAcct = value.First["Value"].ToString(),
+                            CsCsReg = value[1]["Value"].ToString(),
+                            CSCSName = value[2]["Value"].ToString(),
 
-                    });
+                        });
 
+                    }
                 }
             }
+            catch
+            {
+                return cscsNumber;
+            }
+
             return cscsNumber;
         }
 
@@ -51,9 +55,9 @@ namespace PLEXEDC.WEB.BAL.Implementation
             string url = "http://192.168.2.27/IWAPISvcs/IWAPISvcs.svc/api/json/CustInfo/";
             url += sessionId + "/" + inforwareId + "/7";
             var client = new HttpClient();
-            
+
             string jsonString = client.GetStringAsync(url).Result;
-            
+
             JObject obj = JObject.Parse(jsonString);
             JToken row = obj["DataTable"]["Rows"];
 

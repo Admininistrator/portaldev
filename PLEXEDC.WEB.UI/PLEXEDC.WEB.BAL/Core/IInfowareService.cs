@@ -1,9 +1,5 @@
-﻿using PLEXEDC.WEB.BAL.Model;
-using System;
+﻿using PLEXEDC.WEB.DAL.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PLEXEDC.WEB.BAL.Core
 {

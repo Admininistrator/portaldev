@@ -30,14 +30,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\PLEXEDC.WEB.UI\bin\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,20 +57,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthWeb\AuthHeader.cs" />
     <Compile Include="Core\IInfowareService.cs" />
     <Compile Include="Core\ISiebelServices.cs" />
+    <Compile Include="Implementation\InfowareService.cs" />
     <Compile Include="Implementation\SiebelServices.cs" />
-    <Compile Include="Model\ActivityModel.cs" />
-    <Compile Include="Model\BaseModel.cs" />
-    <Compile Include="Model\Biodata.cs" />
-    <Compile Include="Model\CSCSNumber.cs" />
-    <Compile Include="Model\OpenOrder.cs" />
-    <Compile Include="Model\ServiceRequestModel.cs" />
-    <Compile Include="Model\StockList.cs" />
-    <Compile Include="Model\TradableStock.cs" />
-    <Compile Include="Model\TradeModel.cs" />
-    <Compile Include="Model\Transaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\SiebelReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PLEXEDC.WEB.DAL\PLEXEDC.WEB.DAL.csproj">
@@ -67,7 +76,55 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Model\" />
     <Folder Include="Objects\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\SiebelReference\EDC Webservice.wsdl" />
+    <None Include="Service References\SiebelReference\PLEXEDC.WEB.BAL.SiebelReference.EDC_spcGet_spcSR_spcActivitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SiebelReference\PLEXEDC.WEB.BAL.SiebelReference.EDC_spcGet_spcSR_spcActivities_Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SiebelReference\PLEXEDC.WEB.BAL.SiebelReference.EDC_spcSR_spcDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SiebelReference\PLEXEDC.WEB.BAL.SiebelReference.EDC_spcSR_spcDetails_Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SiebelReference\PLEXEDC.WEB.BAL.SiebelReference.Query_spcSRResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SiebelReference\PLEXEDC.WEB.BAL.SiebelReference.Query_spcSR_Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SiebelReference\PLEXEDC.WEB.BAL.SiebelReference.Update_spcSRResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SiebelReference\PLEXEDC.WEB.BAL.SiebelReference.Update_spcSR_Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SiebelReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SiebelReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SiebelReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SiebelReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
