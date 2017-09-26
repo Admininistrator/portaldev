@@ -15,26 +15,115 @@ namespace PLEXEDC.WEB.BAL.Implementation
 {
     public class SiebelServices : ISiebelServices
     {
-        public SiebelReference.EDC_spcSR_spcDetailsClient client;
+        private SiebelReferenceCreate.EDC_spcCreate_spcSRClient _srCreatclient;
+        private SiebelReferenceRequestGet.EDC_spcGet_spcContact_spcSR_spcWFClient _srReqestListClient;
+        private SiebelReferenceAll.EDC_spcContact_spcGet_spcSR_spcActivity_spcWFClient _srRequestActivityClient;
 
-        private XmlDocument xmlSource = new XmlDocument();
-
-        public void SetClient(SiebelReference.EDC_spcSR_spcDetailsClient Client)
+        public void SetClient(SiebelReferenceCreate.EDC_spcCreate_spcSRClient srCreatClient, SiebelReferenceRequestGet.EDC_spcGet_spcContact_spcSR_spcWFClient srRequestListClient, SiebelReferenceAll.EDC_spcContact_spcGet_spcSR_spcActivity_spcWFClient srRequestActivityClient)
         {
-            this.client = Client;
+            this._srCreatclient = srCreatClient;
+            this._srReqestListClient = srRequestListClient;
+            this._srRequestActivityClient = srRequestActivityClient;
         }
 
         public SiebelServices()
         {
-            xmlSource.Load(Path.Combine(HttpContext.Current.Server.MapPath("~/App_Data/EDC ServiceRequests.xml")));
-            var client = new SiebelReference.EDC_spcSR_spcDetailsClient();
-
-            SetClient(client);
+            var srCreateClient = new SiebelReferenceCreate.EDC_spcCreate_spcSRClient();
+            var srRequestListClient = new SiebelReferenceRequestGet.EDC_spcGet_spcContact_spcSR_spcWFClient();
+            var srRequestActivityClient = new SiebelReferenceAll.EDC_spcContact_spcGet_spcSR_spcActivity_spcWFClient();
+            SetClient(srCreateClient, srRequestListClient, srRequestActivityClient);
         }
 
-        public void Create(ServiceRequestModel request)
+        public SiebelReferenceCreate.CreateSR_Output Create(ServiceRequestModel model)
         {
-            throw new NotImplementedException();
+            var srRequest_in = new SiebelReferenceCreate.CreateSR_Input();
+            var srRequest_out = new SiebelReferenceCreate.CreateSR_Output();
+
+            try
+            {
+                if (model != null)
+                {
+                    srRequest_in.Type = model.Type;
+                    srRequest_in.Area = model.Area;
+                    srRequest_in.SubArea = model.SubArea;
+                    srRequest_in.Priority = model.Priority;
+                    srRequest_in.CustomerNumber = model.CitizenId;
+                    srRequest_in.Abstract = model.Summary;
+                    srRequest_in.Source = model.Source;
+
+                    srRequest_out = _srCreatclient.CreateSR(srRequest_in);
+                }
+            }
+            catch
+            {
+                return srRequest_out;
+            }
+            return srRequest_out;
+        }
+
+        public List<ServiceRequestModel> GetServiveRequest(string customerId)
+        {
+            List<ServiceRequestModel> srRequestList = new List<ServiceRequestModel>();
+
+            var srRequest_In = new SiebelReferenceRequestGet.EDC_spcGet_spcSR_spcList_Input();
+            var srRequest_Out = new SiebelReferenceRequestGet.EDC_spcGet_spcSR_spcList_Output();
+
+            srRequest_In.CustomerId = customerId;
+            try
+            {
+                srRequest_Out = _srReqestListClient.EDC_spcGet_spcSR_spcList(srRequest_In);
+
+                foreach (var sr in srRequest_Out.ListOf_ServiceRequest)
+                {
+                    srRequestList.Add(new ServiceRequestModel
+                    {
+                        SRNumber = sr.SRNumber,
+                        Status = sr.Status,
+                        Type = sr.Type,
+                        Summary = sr.Summary
+                    });
+                }
+            }
+            catch
+            {
+                return srRequestList;
+            }
+            return srRequestList;
+        }
+
+        public List<ServiceRequestActivityModel> GetServiceRequestActivity(string srNumber)
+        {
+            List<ServiceRequestActivityModel> activity = new List<ServiceRequestActivityModel>();
+
+            var srActivity_In = new SiebelReferenceAll.EDC_spcGet_spcSR_spcActivities_Input();
+            var srActivity_out = new SiebelReferenceAll.EDC_spcGet_spcSR_spcActivities_Output();
+
+            srActivity_In.ServiceRequestNumber = srNumber;
+
+            try
+            {
+                srActivity_out = _srRequestActivityClient.EDC_spcGet_spcSR_spcActivities(srActivity_In);
+
+                foreach (var sr in srActivity_out.ListOf_ServiceRequest)
+                {
+                    foreach (var ac in sr.ListOf_Activity)
+                    {
+                        activity.Add(new ServiceRequestActivityModel
+                        {
+                            SRNumber = sr.SRNumber,
+                            Description = ac.Description,
+                            Priority = ac.Priority,
+                            Status = ac.Status,
+                            Type = ac.Type
+                        });
+                    }
+                }
+            }
+            catch
+            {
+                return activity;
+            }
+            return activity;
         }
 
         public bool Delete(ServiceRequestModel request)
@@ -44,80 +133,10 @@ namespace PLEXEDC.WEB.BAL.Implementation
 
         public List<ServiceRequestModel> GetDetail(string customerId)
         {
-            //var model = new SiebelReference.EDC_spcSR_spcDetails_Input();
-            //model.CustomerId = customerId;
             List<ServiceRequestModel> requestDetails = new List<ServiceRequestModel>();
-
-            XmlNodeList list = xmlSource.GetElementsByTagName("con:mockOperation");
-            XmlNode reponse = list[2].ChildNodes.Item(3);
-            XmlNode xReseponseContent = reponse["con:responseContent"];
-            XmlNode cdate = xReseponseContent.ChildNodes[0];
-            XDocument xDoc = XDocument.Load(new StringReader(cdate.InnerText));
-
-            var activityResponse = from element in xDoc.Descendants("ListOf_ServiceRequest")
-                                   select element;
-
-            foreach (var xelement in activityResponse.Descendants("ServiceRequest"))
-            {
-                requestDetails.Add(new ServiceRequestModel
-                {
-                    SRNumber = xelement.Element("SRNumber").Value,
-                    Type = xelement.Element("Type").Value,
-                    Status = xelement.Element("Status").Value,
-                    Priority = xelement.Element("Priority").Value,
-                    SubArea = xelement.Element("SubArea").Value,
-                    SubStatus = xelement.Element("SubStatus").Value,
-                    Summary = xelement.Element("Summary").Value,
-                    ClosureComments = xelement.Element("ClosureComments").Value,
-                    CitizenId = xelement.Element("CitizenId").Value,
-                    Area = xelement.Element("Area").Value
-                });
-            }
-            //if (client != null)
-            //{ 
-            //    requestDetails = client.EDC_spcSR_spcDetails(model).ListOf_ServiceRequest.Select(x => new ServiceRequestModel {
-            //        Area = x.CitizenId,
-            //        CitizenId = x.CitizenId,
-            //        ClosureComment = x.ClosureComments,
-            //        Priority = x.Priority,
-            //        SRNumber = x.SRNumber,
-            //        Status = x.Status,
-            //        SubArea = x.SubArea,
-            //        Summary = x.Summary,
-            //        Type = x.Type
-            //    }).ToList();
-            //}
-
             return requestDetails;
         }
 
-        public List<ServiceRequestActivityModel> GetActivity()
-        {
-            List<ServiceRequestActivityModel> activity = new List<ServiceRequestActivityModel>();
-            XmlNodeList list = xmlSource.GetElementsByTagName("con:mockOperation");
-            XmlNode reponse = list[0].ChildNodes.Item(3);
-            XmlNode xReseponseContent = reponse["con:responseContent"];
-            XmlNode cdate = xReseponseContent.ChildNodes[0];
-            XDocument xDoc = XDocument.Load(new StringReader(cdate.InnerText));
-
-            var activityResponse = from element in xDoc.Descendants("ServiceRequest")
-                                   select element;
-
-            foreach (var xelement in activityResponse)
-            {
-                foreach (var ac in xelement.Elements("ListOf_Activity").Elements("Activity"))
-                {
-                    activity.Add(new ServiceRequestActivityModel
-                    {
-                        SRNumber = xelement.Element("SRNumber").Value,
-                        Type = ac.Element("Type").Value,
-                        Status = ac.Element("Status").Value,
-                        Description = ac.Element("Description").Value
-                    });
-                }
-            }
-            return activity;
-        }
 
         public ServiceRequestModel Update(ServiceRequestModel request)
         {

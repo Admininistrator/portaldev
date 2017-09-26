@@ -1,0 +1,53 @@
+﻿@model PLEXEDC.WEB.UI.Models.CustomerAccountViewModel
+
+<div class="modal fade" role="dialog" id="transactionModal" aria-labelledby="labeltransactioListing" aria-hidden="true" tabindex="-1" style="color:black; overflow:auto">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="labeltransactioListing">
+                    Transaction Overview
+                </h4>
+            </div>
+            <div class="modal-body" style="overflow:auto;">
+
+                <div class="row">
+                    <table class="table">
+                        <thead>
+                            <tr style="white-space:nowrap">
+                                <th>Type</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <th>AID</th>
+                                <th>Transaction Date</th>
+
+                            </tr>
+                        </thead>
+                        <tbody style="overflow:auto">
+                            @if (Model.TransactionListing != null)
+                            {
+                                foreach (var tr in Model.TransactionListing)
+                                {
+                                    <tr>
+                                        <td>@tr.Type</td>
+                                        <td>@tr.Description</td>
+                                        <td>@tr.Status</td>
+                                        <td>@tr.AID</td>
+                                        <td>@tr.TxnDate.ToShortDateString()</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

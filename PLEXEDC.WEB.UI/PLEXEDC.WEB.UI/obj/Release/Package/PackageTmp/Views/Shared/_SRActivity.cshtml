@@ -1,0 +1,26 @@
+﻿@model PLEXEDC.WEB.UI.Models.ServiceRequestViewModel
+
+<table class="table">
+    <thead>
+        <tr style="white-space:nowrap">
+            <td>SR Number</td>
+            <td>Type</td>
+            <td>Status</td>
+            <td>Description</td>
+        </tr>
+    </thead>
+    <tbody style="overflow-y:auto; width: 100%;">
+        @if (Model.ServiceRequestsActivity != null)
+        {
+            foreach (var sr in Model.ServiceRequestsActivity)
+            {
+                <tr style="white-space:nowrap">
+                    <td><a name="srNumberActivty">@sr.SRNumber</a></td>
+                    <td>@sr.Type</td>
+                    <td>@sr.Status</td>
+                    <td>@sr.Description</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

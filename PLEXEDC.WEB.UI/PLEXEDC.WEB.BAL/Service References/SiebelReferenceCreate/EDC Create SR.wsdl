@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://siebel.com/CustomUI" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://siebel.com/CustomUI" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://siebel.com/CustomUI">
+      <xsd:element name="CreateSR_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CustomerNumber" type="xsd:string" />
+            <xsd:element name="Abstract" type="xsd:string" />
+            <xsd:element name="Type" type="xsd:string" />
+            <xsd:element name="SubArea" type="xsd:string" />
+            <xsd:element name="Area" type="xsd:string" />
+            <xsd:element name="Source" type="xsd:string" />
+            <xsd:element name="Priority" type="xsd:string" />
+            <xsd:element name="Description" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CreateSR_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CustomerNumber" type="xsd:string" />
+            <xsd:element name="Error_spcCode" type="xsd:string" />
+            <xsd:element name="Error_spcMessage" type="xsd:string" />
+            <xsd:element name="Object_spcId" type="xsd:string" />
+            <xsd:element name="SRId" type="xsd:string" />
+            <xsd:element name="SRNumber" type="xsd:string" />
+            <xsd:element name="Status" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="CreateSR_Input">
+    <part name="CreateSR_Input" element="tns:CreateSR_Input" />
+  </message>
+  <message name="CreateSR_Output">
+    <part name="CreateSR_Output" element="tns:CreateSR_Output" />
+  </message>
+  <portType name="EDC_spcCreate_spcSR">
+    <operation name="CreateSR">
+      <input message="tns:CreateSR_Input" />
+      <output message="tns:CreateSR_Output" />
+    </operation>
+  </portType>
+  <binding name="EDC_spcCreate_spcSR" type="tns:EDC_spcCreate_spcSR">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="CreateSR">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:CreateSR" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EDC_spcCreate_spcSR">
+    <port name="EDC_spcCreate_spcSR" binding="tns:EDC_spcCreate_spcSR">
+      <soap:address location="http://147.135.177.50/eai_anon_enu/start.swe?SWEExtSource=AnonWebService&amp;SweExtCmd=Execute" />
+    </port>
+  </service>
+</definitions>

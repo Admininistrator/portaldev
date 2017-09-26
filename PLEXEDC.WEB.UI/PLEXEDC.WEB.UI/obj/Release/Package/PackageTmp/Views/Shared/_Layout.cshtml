@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/App_Themes/www/app.min.css" rel="stylesheet" />
+    <link href="~/App_Themes/www/dropzone.css" rel="stylesheet" />
+    <link href="~/App_Themes/www/dropzone.min.css" rel="stylesheet" />
+    <link href="~/App_Themes/www/EcoAllStyles.min.css" rel="stylesheet" />
+    <link href="~/App_Themes/www/real-person.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+
+
+    <div class="show-for-large first-top-menu">
+        <div class="row top-menu">
+            <div class="large-8 columns global-menu vertical-align">
+                <ul class="menu ">
+                    <li class="active"><a target="_self" href="#">Welcome: @ViewBag.CustomerName</a></li>
+                    <li><a target="_self" href="/">Infoware ID: @ViewBag.InfowareId</a></li>
+                    <li><a target="_self" href="#">Last Login: @ViewBag.LastLoginDate</a></li>
+                </ul>
+
+
+            </div>
+            <div class="large-4 columns social vertical-align">
+                <div class="social-links vertical-align-inside">
+                    <span class="follow-us"><a href="/group/news-and-media/social-media" target="_blank">Follow us</a></span>
+
+
+                    <a href="https://www.youtube.com/user/EcobankGroup" class="social-button has-tip top" target="_blank" title="" aria-haspopup="true" data-disable-hover="false" data-tooltip="k0xx1m-tooltip" aria-describedby="4ddi1l-tooltip" data-yeti-box="4ddi1l-tooltip" data-toggle="4ddi1l-tooltip" data-resize="4ddi1l-tooltip" data-events="resize"><span class="fab fab-youtube"></span></a>
+                    <a href="https://www.facebook.com/EcobankGroup/" class="social-button has-tip top" target="_blank" title="" aria-haspopup="true" data-disable-hover="false" data-tooltip="aywe1t-tooltip" aria-describedby="xdr888-tooltip" data-yeti-box="xdr888-tooltip" data-toggle="xdr888-tooltip" data-resize="xdr888-tooltip" data-events="resize"><span class="fab fab-facebook-alt"></span></a>
+                    <a href="https://twitter.com/GroupEcobank" class="social-button has-tip top" target="_blank" title="" aria-haspopup="true" data-disable-hover="false" data-tooltip="dx8ed6-tooltip" aria-describedby="64hvuw-tooltip" data-yeti-box="64hvuw-tooltip" data-toggle="64hvuw-tooltip" data-resize="64hvuw-tooltip" data-events="resize"><span class="fab fab-twitter"></span></a>
+                    <a href="https://www.instagram.com/ecobank_group/" class="social-button has-tip top" target="_blank" title="" aria-haspopup="true" data-disable-hover="false" data-tooltip="mxrenq-tooltip" aria-describedby="dbgm5v-tooltip" data-yeti-box="dbgm5v-tooltip" data-toggle="dbgm5v-tooltip" data-resize="dbgm5v-tooltip" data-events="resize"><span class="fab fab-instagram"></span></a>
+                    <a href="https://www.linkedin.com/in/ecobank-group-26a13447" class="social-button has-tip top" target="_blank" title="" aria-haspopup="true" data-disable-hover="false" data-tooltip="sw6j7c-tooltip" aria-describedby="z47cac-tooltip" data-yeti-box="z47cac-tooltip" data-toggle="z47cac-tooltip" data-resize="z47cac-tooltip" data-events="resize"><span class="fab fab-linkedin-alt"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar navbar-inverse  margin-bottom" style="background-color:#005b82;">
+        <div class="container siteheader ">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"> <img src="~/Images/untitled.png" /></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                    <li><a href="@Url.Action("Account", "MyAccount")">My Account</a></li>
+                    <li><a href="@Url.Action("Trade", "Trade")">Trade</a></li>
+                    <li><a href="@Url.Action("ServiceInformation","ServiceRequest")">Service Information</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="glyphicon glyphicon-th-large"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                            <li><a href="@Url.Action("Account", "MyAccount")">My Account</a></li>
+                            <li><a href="@Url.Action("Trade", "Trade")">Trade</a></li>
+                            <li><a href="@Url.Action("ServiceInformation","ServiceRequest")">Service Information</a></li>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                @*@Html.Partial("_LoginPartial")*@
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+
+    </div>
+    <footer></footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

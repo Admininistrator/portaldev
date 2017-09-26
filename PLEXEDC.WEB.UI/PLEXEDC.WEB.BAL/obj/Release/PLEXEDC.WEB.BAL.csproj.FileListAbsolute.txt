@@ -1,0 +1,14 @@
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Release\PLEXEDC.WEB.BAL.dll.config
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Release\PLEXEDC.WEB.BAL.dll
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Release\PLEXEDC.WEB.BAL.pdb
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Release\EntityFramework.dll
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Release\Newtonsoft.Json.dll
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Release\PLEXEDC.WEB.DAL.dll
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Release\PLEXEDC.WEB.DAL.pdb
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Release\EntityFramework.xml
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\bin\Release\Newtonsoft.Json.xml
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\obj\Release\PLEXEDC.WEB.BAL.csprojResolveAssemblyReference.cache
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\obj\Release\PLEXEDC.WEB.BAL.dll
+C:\Users\tesli\Documents\GitHub\portaldev\PLEXEDC.WEB.UI\PLEXEDC.WEB.BAL\obj\Release\PLEXEDC.WEB.BAL.pdb

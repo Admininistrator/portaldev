@@ -1,0 +1,39 @@
+﻿@model PLEXEDC.WEB.UI.Models.TradeViewModel
+
+
+    <table class="table">
+        <thead>
+            <tr style="white-space:nowrap">
+                <th>Stock Code</th>
+                <th>Name</th>
+                <th>Transction Type</th>
+                <th>Quantity</th>
+                <th>Order Date</th>
+                <th>Quote Price</th>
+                <th>Limit Price</th>
+                <th>In The Mkt</th>
+                
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tr in Model.OpenOrder)
+            {
+                <tr style="white-space:nowrap">
+                    <td>@tr.StockCode</td>
+                    <td>@tr.Name</td>
+                    <td>@tr.TxnType</td>
+                    <td>@tr.Qty</td>
+                    <td>@tr.OrderDate</td>
+                    <td>@tr.QuotePrice</td>
+                    <td>@tr.LimitPrice</td>
+                    <td>@tr.InTheMkt</td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
+
+

@@ -63,7 +63,17 @@
     <Compile Include="Implementation\InfowareService.cs" />
     <Compile Include="Implementation\SiebelServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\SiebelReference\Reference.cs">
+    <Compile Include="Service References\SiebelReferenceAll\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SiebelReferenceCreate\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SiebelReferenceRequestGet\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -85,43 +95,83 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Service References\SiebelReference\EDC Webservice.wsdl" />
-    <None Include="Service References\SiebelReference\PLEXEDC.WEB.BAL.SiebelReference.EDC_spcGet_spcSR_spcActivitiesResponse.datasource">
+    <None Include="Service References\SiebelReferenceAll\EDC Service.wsdl" />
+    <None Include="Service References\SiebelReferenceAll\PLEXEDC.WEB.BAL.SiebelReferenceAll.EDC_spcGet_spcSR_spcActivitiesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SiebelReference\PLEXEDC.WEB.BAL.SiebelReference.EDC_spcGet_spcSR_spcActivities_Output.datasource">
+    <None Include="Service References\SiebelReferenceAll\PLEXEDC.WEB.BAL.SiebelReferenceAll.EDC_spcGet_spcSR_spcActivities_Output.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SiebelReference\PLEXEDC.WEB.BAL.SiebelReference.EDC_spcSR_spcDetailsResponse.datasource">
+    <None Include="Service References\SiebelReferenceAll\PLEXEDC.WEB.BAL.SiebelReferenceAll.EDC_spcSR_spcDetailsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SiebelReference\PLEXEDC.WEB.BAL.SiebelReference.EDC_spcSR_spcDetails_Output.datasource">
+    <None Include="Service References\SiebelReferenceAll\PLEXEDC.WEB.BAL.SiebelReferenceAll.EDC_spcSR_spcDetails_Output.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SiebelReference\PLEXEDC.WEB.BAL.SiebelReference.Query_spcSRResponse.datasource">
+    <None Include="Service References\SiebelReferenceAll\PLEXEDC.WEB.BAL.SiebelReferenceAll.Query_spcSRResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SiebelReference\PLEXEDC.WEB.BAL.SiebelReference.Query_spcSR_Output.datasource">
+    <None Include="Service References\SiebelReferenceAll\PLEXEDC.WEB.BAL.SiebelReferenceAll.Query_spcSR_Output.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SiebelReference\PLEXEDC.WEB.BAL.SiebelReference.Update_spcSRResponse.datasource">
+    <None Include="Service References\SiebelReferenceAll\PLEXEDC.WEB.BAL.SiebelReferenceAll.Update_spcSRResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SiebelReference\PLEXEDC.WEB.BAL.SiebelReference.Update_spcSR_Output.datasource">
+    <None Include="Service References\SiebelReferenceAll\PLEXEDC.WEB.BAL.SiebelReferenceAll.Update_spcSR_Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SiebelReferenceCreate\EDC Create SR.wsdl" />
+    <None Include="Service References\SiebelReferenceCreate\PLEXEDC.WEB.BAL.SiebelReferenceCreate.CreateSRResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SiebelReferenceCreate\PLEXEDC.WEB.BAL.SiebelReferenceCreate.CreateSR_Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SiebelReferenceRequestGet\Get SR List.wsdl" />
+    <None Include="Service References\SiebelReferenceRequestGet\PLEXEDC.WEB.BAL.SiebelReferenceRequestGet.EDC_spcGet_spcSR_spcListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SiebelReferenceRequestGet\PLEXEDC.WEB.BAL.SiebelReferenceRequestGet.EDC_spcGet_spcSR_spcList_Output.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\SiebelReference\" />
+    <WCFMetadataStorage Include="Service References\SiebelReferenceAll\" />
+    <WCFMetadataStorage Include="Service References\SiebelReferenceCreate\" />
+    <WCFMetadataStorage Include="Service References\SiebelReferenceRequestGet\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\SiebelReference\configuration91.svcinfo" />
+    <None Include="Service References\SiebelReferenceCreate\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\SiebelReference\configuration.svcinfo" />
+    <None Include="Service References\SiebelReferenceCreate\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\SiebelReference\Reference.svcmap">
+    <None Include="Service References\SiebelReferenceCreate\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SiebelReferenceAll\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SiebelReferenceAll\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SiebelReferenceAll\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SiebelReferenceRequestGet\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SiebelReferenceRequestGet\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SiebelReferenceRequestGet\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

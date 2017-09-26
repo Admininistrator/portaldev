@@ -28,14 +28,14 @@ namespace PLEXEDC.WEB.UI.Migrations
             //    );
             //
 
-            context.SRType.AddOrUpdate(t => t.Name,
-            new SRType { Name = "Complaint", Description = "Complaint" },
-            new SRType { Name = "Compliments", Description = "Compliments" },
-            new SRType { Name = "Enquiry", Description = "Enquiry" },
-            new SRType { Name = "Feedback", Description = "Feedback" },
-            new SRType { Name = "Request", Description = "Request" },
-            new SRType { Name = "Support", Description = "Support" }
-            );
+            //context.SRType.AddOrUpdate(t => t.Name,
+            //new SRType { Name = "Complaint", Description = "Complaint" },
+            //new SRType { Name = "Compliments", Description = "Compliments" },
+            //new SRType { Name = "Enquiry", Description = "Enquiry" },
+            //new SRType { Name = "Feedback", Description = "Feedback" },
+            //new SRType { Name = "Request", Description = "Request" },
+            //new SRType { Name = "Support", Description = "Support" }
+            //);
 
             // context.SRArea.AddOrUpdate(a => a.Name,
             // new SRArea { Name = "ATMs", Description = "ATMs", SRTypeId = 1 },
@@ -49,7 +49,7 @@ namespace PLEXEDC.WEB.UI.Migrations
             // new SRArea { Name = "Staff", Description = "Staff", SRTypeId = 1 },
             // new SRArea { Name = "eServices", Description = "Mobile Money", SRTypeId = 1 },
 
-            // // children to compliments starts here
+            //  // children to compliments starts here
             //  new SRArea { Name = "Cards", Description = "Cards", SRTypeId = 2 },
             //  new SRArea { Name = "Internet Banking", Description = "Internet Banking", SRTypeId = 2 },
 
@@ -66,7 +66,7 @@ namespace PLEXEDC.WEB.UI.Migrations
             // new SRArea { Name = "Cheque", Description = "Cheque", SRTypeId = 4 },
             // new SRArea { Name = "Survey", Description = "Survey", SRTypeId = 4 },
 
-            // // children to request starts here
+            //// children to request starts here
             //new SRArea { Name = "Account", Description = "Account", SRTypeId = 5 },
             //new SRArea { Name = "Cheque", Description = "Cheque", SRTypeId = 5 },
             //new SRArea { Name = "Internet Banking", Description = "Internet Banking", SRTypeId = 5 },
@@ -74,7 +74,7 @@ namespace PLEXEDC.WEB.UI.Migrations
             //new SRArea { Name = "Mobile App", Description = "Mobile App", SRTypeId = 5 },
             //new SRArea { Name = "Transfers", Description = "Transfers", SRTypeId = 5 },
 
-            // // children to support starts here
+            //// children to support starts here
             //new SRArea { Name = "Dispute Res & Settl", Description = "Dispute Res & Settl", SRTypeId = 6 },
             //new SRArea { Name = "Fraud & Risk", Description = "Fraud & Risk", SRTypeId = 6 },
             //new SRArea { Name = "Fraud Related Resp Cod", Description = "Fraud Related Resp Cod", SRTypeId = 6 },

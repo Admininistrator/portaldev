@@ -6,9 +6,10 @@ namespace PLEXEDC.WEB.BAL.Core
     public interface ISiebelServices
     {
         List<ServiceRequestModel> GetDetail(string customerId);
-        List<ServiceRequestActivityModel> GetActivity();
+        List<ServiceRequestActivityModel> GetServiceRequestActivity();
+        List<ServiceRequestModel> GetServiveRequest(string customerId);
         ServiceRequestModel Update(ServiceRequestModel request);
-        void Create(ServiceRequestModel request);
+        SiebelReferenceCreate.CreateSR_Output Create(ServiceRequestModel request);
         bool Delete(ServiceRequestModel request);
         
     }

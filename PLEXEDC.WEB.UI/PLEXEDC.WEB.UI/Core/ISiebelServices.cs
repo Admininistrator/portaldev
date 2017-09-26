@@ -10,6 +10,6 @@ namespace PLEXEDC.WEB.UI.Core
         ServiceRequestModel Create(ServiceRequestModel request);
         bool Delete(ServiceRequestModel request);
         //void SetClient(GetCustServiceRequestsClient getCustServiceRequestsClient);
-        void SetClient(SiebelReference.EDC_spcSR_spcDetailsClient client);
+        void SetClient(SiebelReferenceCreate.EDC_spcCreate_spcSRClient client);
     }
 }

@@ -1,0 +1,19 @@
+﻿@model PLEXEDC.WEB.UI.Models.ServiceRequestViewModel
+
+@{
+    ViewBag.Title = "SRConfirmation";
+}
+
+<div  class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p> Your service request was @Model.Message, 
+                 <br />
+                    With Reference Number @Model.SRNumber. <a href="@Url.Action("ServiceInformation", "ServiceRequest")">Click Here</a> to go back to there request page.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+

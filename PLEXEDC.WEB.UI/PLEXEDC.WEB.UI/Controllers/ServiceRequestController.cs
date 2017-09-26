@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 using PLEXEDC.WEB.BAL.Implementation;
+using PLEXEDC.WEB.BAL.SiebelReferenceCreate;
 using PLEXEDC.WEB.DAL.Models;
 using PLEXEDC.WEB.UI.Models;
 using System;
@@ -25,11 +26,11 @@ namespace PLEXEDC.WEB.UI.Controllers
 
         private IEnumerable<SelectListItem> GetSRType()
         {
-             int? selectedItem = null ;
+            int? selectedItem = null;
             var AllSRType = db.SRType.OrderBy(x => x.Name).ToList();
 
             AllSRType.Insert(0, new SRType { Id = 0, Name = "--Select SR Type--" });
-            return AllSRType.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString(), Selected = x.Id == selectedItem});
+            return AllSRType.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString(), Selected = x.Id == selectedItem });
         }
 
 
@@ -43,7 +44,7 @@ namespace PLEXEDC.WEB.UI.Controllers
         }
 
         [HttpPost]
-        public ActionResult  GetSRAreaNew(int? typeId)
+        public ActionResult GetSRAreaNew(int? typeId)
         {
             var srArea = db.SRArea.Where(x => x.SRTypeId == typeId.Value).OrderBy(x => x.Name).ToList();
             srArea.Insert(0, new SRArea { Id = 0, Name = "--Select SR Area--" });
@@ -52,7 +53,7 @@ namespace PLEXEDC.WEB.UI.Controllers
 
         private IEnumerable<SelectListItem> GetSRSubArea()
         {
-           int? selectedItem = null;
+            int? selectedItem = null;
 
             var AllSRType = new List<SRSubArea>();
             return AllSRType.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString(), Selected = x.Id == selectedItem });
@@ -99,7 +100,7 @@ namespace PLEXEDC.WEB.UI.Controllers
         public ActionResult getSRActivity(string srNumber)
         {
             var model = new ServiceRequestViewModel();
-            model.ServiceRequestsActivity = _siebelServices.GetActivity().Where(x => x.SRNumber.Equals(srNumber)).ToList();
+            model.ServiceRequestsActivity = _siebelServices.GetServiceRequestActivity(srNumber);
             return PartialView("_SRActivity", model);
         }
 
@@ -114,8 +115,9 @@ namespace PLEXEDC.WEB.UI.Controllers
             ViewBag.LastLoginDate = person.LastLoginDate.ToShortDateString();
 
             var model = new ServiceRequestViewModel();
-            
-            model.ServiceRequests = _siebelServices.GetDetail("");
+
+            model.ServiceRequest = _siebelServices.GetServiveRequest(siebelId);
+            model.CitizenId = person.SiebelId;
             model.TypeDropDown = GetSRType();
             model.AreaDropDown = GetSRAreaEmpty();
             model.SubAreaDropDown = GetSRSubArea();
@@ -130,6 +132,8 @@ namespace PLEXEDC.WEB.UI.Controllers
         [HttpPost]
         public ActionResult ServiceInformation(ServiceRequestViewModel model)
         {
+            PLEXEDC.WEB.BAL.SiebelReferenceCreate.CreateSR_Output msg_Out = new CreateSR_Output();
+
             if (ModelState.IsValid)
             {
                 var srequest = new ServiceRequestModel();
@@ -137,21 +141,15 @@ namespace PLEXEDC.WEB.UI.Controllers
                 srequest.Area = db.SRArea.Where(r => r.Id == model.Area).First().Name;
                 srequest.SubArea = db.SRSubArea.Where(s => s.Id == model.SubArea).First().Name;
                 srequest.Status = "Open";
-                srequest.SubStatus = "Unassigned" ;
+                srequest.SubStatus = "Unassigned";
                 srequest.Priority = db.SRPriority.Where(p => p.Id == model.Priority).First().Name;
                 srequest.CitizenId = model.CitizenId;
                 srequest.Summary = model.Summary;
+                srequest.Source = "Web";
 
-                _siebelServices.Create(srequest);
+                 msg_Out = _siebelServices.Create(srequest);
             }
-
-            model.TypeDropDown = GetSRType();
-            model.AreaDropDown = GetSRAreaEmpty();
-            model.SubAreaDropDown = GetSRSubArea();
-            model.PriorityDropDown = GetSRPriority();
-            //model.StatusDropDown = GetSRStatus();
-            //model.SubStatusDropDown = GetSRSubStatus();
-            return View(model);
+            return View("SRConfirmation", new ServiceRequestViewModel { Message = msg_Out.Status, SRNumber = msg_Out.SRNumber });
         }
 
     }

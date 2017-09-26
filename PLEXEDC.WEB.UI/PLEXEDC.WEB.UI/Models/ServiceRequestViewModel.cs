@@ -6,10 +6,10 @@ namespace PLEXEDC.WEB.UI.Models
 {
     public class ServiceRequestViewModel
     {
-        [Required(ErrorMessage ="First Name required")]
+        //[Required(ErrorMessage ="First Name required")]
         public string FirstName { get; set; }
 
-        [Required(ErrorMessage = "Last Name required")]
+        //[Required(ErrorMessage = "Last Name required")]
         public string LastName { get; set; }
 
         [Required( ErrorMessage = "Please select an SR Area")]
@@ -17,6 +17,8 @@ namespace PLEXEDC.WEB.UI.Models
         public int Area { get; set; }
 
         public string CitizenId { get; set; }
+
+        public string Source { get; set; }
 
         public string ClosureComments { get; set; }
 
@@ -26,12 +28,12 @@ namespace PLEXEDC.WEB.UI.Models
 
         public string SRNumber { get; set; }
 
-        [Required(ErrorMessage = "Please select an SR Status")]
-        [Range(1, double.MaxValue, ErrorMessage = "Please select an SR Status")]
+        //[Required(ErrorMessage = "Please select an SR Status")]
+        //[Range(1, double.MaxValue, ErrorMessage = "Please select an SR Status")]
         public int Status { get; set; }
 
-        [Required( ErrorMessage = "Please select an SR Sub-Status")]
-        [Range(1, double.MaxValue, ErrorMessage = "Please select an SR Status")]
+        //[Required( ErrorMessage = "Please select an SR Sub-Status")]
+        //[Range(1, double.MaxValue, ErrorMessage = "Please select an SR Sub-Status")]
         public int SubStatus { get; set; }
 
         [Required(ErrorMessage = "Please select an SR Sub-Area")]
@@ -43,6 +45,8 @@ namespace PLEXEDC.WEB.UI.Models
         [Required(ErrorMessage = "Please select an SR Type")]
         [Range(1, double.MaxValue, ErrorMessage = "Please select an SR Type")]
         public int Type { get; set; }
+
+        public string Message { get; set; }
         public IEnumerable<System.Web.Mvc.SelectListItem> TypeDropDown { get; set; }
 
         public IEnumerable<System.Web.Mvc.SelectListItem> AreaDropDown { get; set; }
@@ -55,7 +59,7 @@ namespace PLEXEDC.WEB.UI.Models
 
         public IEnumerable<System.Web.Mvc.SelectListItem> PriorityDropDown { get; set; }
 
-        public List<ServiceRequestModel> ServiceRequests { get;  set; }
+        public List<ServiceRequestModel> ServiceRequest { get;  set; }
 
         public List<ServiceRequestActivityModel> ServiceRequestsActivity { get; set; }
     }

@@ -1,0 +1,232 @@
+﻿@model PLEXEDC.WEB.UI.Models.ServiceRequestViewModel
+
+@{
+    ViewBag.Title = "Ecobank-EDC Portal | Service Information";
+}
+
+@Html.HiddenFor(m => m.CitizenId)
+@section scripts{
+    <script>
+        $('#Type').change(function () {
+            var id = $("#Type option:selected").val();
+            $.ajax({
+                url: "@Url.Action("GetSRAreaNew", "ServiceRequest")",
+                data: { typeId: id },
+                dataType: "json",
+                type: "POST",
+                success: function (data) {
+                    var items = "";
+                    $.each(data, function (i, item) {
+                        items += "<option value=\"" + item.Value + "\">" + item.Text + "</option>";
+                    });
+                    $("#Area").html(items);
+
+                },
+                error: function () {
+                    alert("An error occured");
+                },
+            });
+
+        });
+
+        $('#Area').change(function () {
+            var id = $("#Area option:selected").val();
+
+            $.ajax({
+                url: "@Url.Action("GetSRSubAreaNew", "ServiceRequest")",
+                data: { areaId: id },
+                dataType: "json",
+                type: "POST",
+                success: function (data) {
+                    var items = "";
+                    $.each(data, function (i, item) {
+                        items += "<option value=\"" + item.Value + "\">" + item.Text + "</option>";
+                    });
+                    $("#SubArea").html(items);
+                },
+                error: function () {
+                    alert("An error occured");
+                },
+            });
+        });
+
+        $('a[name="srNumberActivty"]').click(function () {
+            var srn = $(this).text();
+            $.ajax({
+                url: "@Url.Action("getSRActivity", "ServiceRequest")",
+                data: { srNumber: srn },
+                dataType: "html",
+                type: "POST",
+                success: function (result) {
+                    $('#srActivityView').html(result);
+                },
+                error: function () {
+                    alert("An error occured");
+                },
+            });
+        });
+
+    </script>
+}
+<div class="row">
+    <h6>Service Request</h6>
+    <div class="col-md-6">
+        <div class="panel panel-group">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="row">
+                        <div id="tradeStatus" class="table-responsive" style="overflow-y:auto; width: 100%;">
+                            <table class="table">
+                                <thead>
+                                    <tr style="white-space:nowrap">
+                                        <td>SR Number</td>
+                                        <td>Type</td>
+                                        <td>Status</td>
+                                        <td>Summary</td>
+                                    </tr>
+                                </thead>
+                                <tbody style="overflow-y:auto; width: 100%;">
+                                    @if (Model.ServiceRequests != null)
+                                    {
+                                        foreach (var sr in Model.ServiceRequests.Take(2))
+                                        {
+                                            <tr style="white-space:nowrap">
+                                                <td><a name="srNumberActivty">@sr.SRNumber</a></td>
+                                                <td>@sr.Type</td>
+                                                <td>@sr.Status</td>
+                                                <td>@sr.Summary</td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="panel-footer">
+                            <a data-target="#showMoreModal" data-toggle="modal"><span>Show more</span></a>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <a href="#" class="btn btn-custom">Remove</a>
+                        <a href="#" class="btn btn-custom ">Close</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-info">
+            <div class="panel-heading panel-heading-custom">
+                <h6>Create New Service Request</h6>
+            </div>
+            <div class="panel-body">
+
+                <div class="panel-body">
+                    @using (Html.BeginForm("ServiceInformation", "ServiceRequest", FormMethod.Post))
+                    {
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            @Html.DropDownListFor(m => m.Type, Model.TypeDropDown, new { @class = "form-control" })
+                                            <span style="float:right; color:red;">@Html.ValidationMessageFor(m => m.Type)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                @Html.DropDownListFor(m => m.Area, Model.AreaDropDown, new { @class = "form-control" })
+                                                <span style="float:right; color:red;">@Html.ValidationMessageFor(m => m.Area)</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            @Html.DropDownListFor(m => m.SubArea, Model.SubAreaDropDown, new { @class = "form-control" })
+                                            <span style="float:right; color:red;">@Html.ValidationMessageFor(m => m.SubArea)</span>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    @Html.DropDownListFor(m => m.Priority, Model.PriorityDropDown, new { @class = "form-control" })
+                                    <span style="float:right; color:red;">@Html.ValidationMessageFor(m => m.Priority)</span>
+                                </div>
+                                <div class="form-group">
+                                    @Html.TextAreaFor(m => m.Summary, new { @class = "form-control", @placeholder = "Summary" })
+                                    <span style="float:right; color:red;">@Html.ValidationMessageFor(m => m.Summary)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 pull-right">
+                                <button href="#" class="btn btn-custom">Submit</button>
+                                <button href="#" class="btn btn-custom">Cancel</button>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @Html.Partial("_ShowMoreServiceRequest")
+</div>
+<div class="row">
+    <div class="panel panel-info">
+        <div class="panel-heading panel-heading-custom">
+            <h6>Service Request Activities</h6>
+        </div>
+        <div class="panel-body">
+
+            <div class="row">
+                <div id="srActivityView" class="table-responsive" style="overflow-y:auto; width: 100%; padding:5px;">
+                    <table class="table">
+                        <thead>
+                            <tr style="white-space:nowrap">
+                                <td>SR Number</td>
+                                <td>Type</td>
+                                <td>Status</td>
+                                <td>Description</td>
+                            </tr>
+                        </thead>
+                        <tbody style="overflow-y:auto; width: 100%;">
+                            @if (Model.ServiceRequestsActivity != null)
+                            {
+                                foreach (var sr in Model.ServiceRequestsActivity)
+                                {
+                                    <tr style="white-space:nowrap">
+                                        <td><a>@sr.SRNumber</a></td>
+                                        <td>@sr.Type</td>
+                                        <td>@sr.Status</td>
+                                        <td>@sr.Description</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+

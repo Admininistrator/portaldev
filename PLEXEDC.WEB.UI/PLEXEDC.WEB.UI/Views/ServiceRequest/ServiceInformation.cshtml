@@ -4,7 +4,7 @@
     ViewBag.Title = "Ecobank-EDC Portal | Service Information";
 }
 
-@Html.HiddenFor(m => m.CitizenId)
+
 @section scripts{
     <script>
         $('#Type').change(function () {
@@ -126,6 +126,7 @@
                 <div class="panel-body">
                     @using (Html.BeginForm("ServiceInformation", "ServiceRequest", FormMethod.Post))
                     {
+                        @Html.HiddenFor(m => m.CitizenId)
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="row">
@@ -173,7 +174,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-5 pull-right">
-                                <button href="#" class="btn btn-custom">Submit</button>
+                                <button type="submit" class="btn btn-custom">Submit</button>
                                 <button href="#" class="btn btn-custom">Cancel</button>
                             </div>
                         </div>

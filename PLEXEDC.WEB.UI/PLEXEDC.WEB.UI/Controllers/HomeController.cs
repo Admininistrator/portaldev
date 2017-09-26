@@ -29,7 +29,7 @@ namespace PLEXEDC.WEB.UI.Controllers
             var userId = User.Identity.GetUserName();
             var person = db.Person.Where(c => c.ApplicationUserId == userId).First();
             string siebelId = person.SiebelId;
-            model.RequestDetail = _siebelServices.GetDetail(siebelId);
+            model.RequesList = _siebelServices.GetDetail(siebelId);
             ViewBag.InfowareId = person.InfowareId;
             string sessionId = person.SessionId;
             ViewBag.LastLoginDate = person.LastLoginDate.ToShortDateString();

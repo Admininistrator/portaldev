@@ -20,5 +20,7 @@ namespace PLEXEDC.WEB.DAL.Models
         public string SubArea { get; set; }
         public string Summary { get; set; }
         public string Type { get; set; }
+
+        public string Source { get; set; }
     }
 }

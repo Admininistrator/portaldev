@@ -5,7 +5,8 @@ namespace PLEXEDC.WEB.UI.Models
 {
     public class IndexViewModel
     {
-        public List<ServiceRequestModel> RequestDetail { get; set; }
+        public List<ServiceRequestModel> RequestList { get; set; }
         public List<ServiceRequestActivityModel> RequestActivity { get; set; }
+        public List<ServiceRequestModel> RequesList { get; internal set; }
     }
 }

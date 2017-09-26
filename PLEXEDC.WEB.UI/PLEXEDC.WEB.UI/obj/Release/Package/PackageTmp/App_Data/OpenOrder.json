@@ -1,0 +1,123 @@
+{
+  "OutValue": "",
+  "StatusID": 0,
+  "StatusMessage": "",
+  "DataTable": {
+    "ColumnDef": [
+      {
+        "Key": 0,
+        "Value": "StockCode"
+      },
+      {
+        "Key": 1,
+        "Value": "Name"
+      },
+      {
+        "Key": 2,
+        "Value": "TxnType"
+      },
+      {
+        "Key": 3,
+        "Value": "Qty"
+      },
+      {
+        "Key": 4,
+        "Value": "OrderDate"
+      },
+      {
+        "Key": 5,
+        "Value": "QuotePrice"
+      },
+      {
+        "Key": 6,
+        "Value": "LimitPrice"
+      },
+      {
+        "Key": 7,
+        "Value": "InTheMkt"
+      },
+      {
+        "Key": 8,
+        "Value": "ID"
+      }
+    ],
+    "Rows": [
+      [
+        {
+          "Key": 0,
+          "Value": "EGH"
+        },
+        {
+          "Key": 1,
+          "Value": "ECOBANK GHANA LIMITED"
+        },
+        {
+          "Key": 2,
+          "Value": "Sell"
+        },
+        {
+          "Key": 3,
+          "Value": "20"
+        },
+        {
+          "Key": 4,
+          "Value": "1\/16\/2017 12:00:00 AM"
+        },
+        {
+          "Key": 5,
+          "Value": "67"
+        },
+        {
+          "Key": 6,
+          "Value": "0"
+        },
+        {
+          "Key": 7,
+          "Value": "No"
+        },
+        {
+          "Key": 8,
+          "Value": "2"
+        }
+      ],
+      [
+        {
+          "Key": 0,
+          "Value": "EGH"
+        },
+        {
+          "Key": 1,
+          "Value": "ECOBANK GHANA LIMITED"
+        },
+        {
+          "Key": 2,
+          "Value": "Tolu"
+        },
+        {
+          "Key": 3,
+          "Value": "10"
+        },
+        {
+          "Key": 4,
+          "Value": "11\/15\/2016 12:00:00 AM"
+        },
+        {
+          "Key": 5,
+          "Value": "67"
+        },
+        {
+          "Key": 6,
+          "Value": "0"
+        },
+        {
+          "Key": 7,
+          "Value": "No"
+        },
+        {
+          "Key": 8,
+          "Value": "1"
+        }
+      ]
+    ]
+  }
+}
